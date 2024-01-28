@@ -1,0 +1,110 @@
+.footer-container{
+    padding: 40px;
+    background-color: #202124;
+}
+
+.footer__menu{
+    display: flex;
+    justify-content: space-around;
+    column-gap: 30px;
+    color: whitesmoke;
+}
+
+.footer__menu-list span{
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.footer__menu-list{
+    text-align: left;
+    
+}
+
+.footer__menu-list ul{
+    list-style: none;
+    margin-top: 10px;
+}
+
+.footer__menu-list li{
+    margin: 8px 0px;
+}
+
+.footer__menu-list a{
+    text-decoration: none;
+    font-size: 14px;
+    color: whitesmoke;
+    opacity: 0.7;
+    margin: 10px 0px;
+}
+
+.footer__menu-list a:hover{
+    opacity: 1;
+}
+
+.footer__dowload-app{
+    margin-top: 10px;
+}
+
+.dowload-app{
+    display: inline-block;
+}
+
+.dowload-app:first-child{
+    margin-right: 10px;
+}
+
+.dowload-app a{
+    width: 136px;
+    height: 42px;
+    display: inline-block;
+    border: 1px solid #4f4e4e;
+    border-radius: 6px;
+}
+
+.apple{
+    background: url(https://static.kfcvietnam.com.vn/images/web/logo_appstore.png) no-repeat;
+    background-size: contain;
+}
+
+.play{
+    background: url(https://static.kfcvietnam.com.vn/images/web/logo_playstore.png) no-repeat;
+    background-size: contain;
+}
+.footer__bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.footer__bottom p{
+    width: 100%;
+    color:whitesmoke;
+    text-align: center;
+}
+
+.social-contact{
+    display: flex;
+    column-gap: 8px;
+}
+
+.social-icon{
+    color: whitesmoke;
+    font-size: 20px;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    border: 1px solid #494949;
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+}
+
+.social-icon:hover{
+    opacity: 1;
+}

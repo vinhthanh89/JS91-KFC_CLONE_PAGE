@@ -1,0 +1,43 @@
+.suggestion-container {
+  padding: 30px;
+}
+
+.suggestion-container span::after {
+  width: 75%;
+}
+
+.suggestio__card-container {
+  display: flex;
+  column-gap: 20px;
+}
+
+.suggestio__card-container .ant-card {
+  width: 300px;
+}
+
+.button-container {
+  margin-top: 40px;
+}
+
+.button {
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 25px;
+  border: 1px solid black;
+  background-color: inherit;
+  margin-left: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.button:hover{
+    opacity: 1;
+}
+
+.add-button{
+    border: none;
+    background-color: #e4002b;
+    color: whitesmoke;
+}

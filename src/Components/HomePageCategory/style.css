@@ -1,0 +1,14 @@
+.foodcategory-container{
+  padding: 30px;
+}
+
+.foodcategory-container span::after{
+  width: 78%;
+}
+
+.foodcategory__card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}

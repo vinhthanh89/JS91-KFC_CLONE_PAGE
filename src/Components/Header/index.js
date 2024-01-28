@@ -9,12 +9,12 @@ const Header = () => {
       <div className="header-container">
         <div className="header-navigation">
           <div className="logo-container">
-            <Link href="/" className="logo"></Link>
+            <Link to="/" className="logo"></Link>
           </div>
           <div className="navigation">
             <ul className="navigation__menu-bar">
               <li>
-                <NavLink>Thực Đơn</NavLink>
+                <NavLink to="/order">Thực Đơn</NavLink>
               </li>
               <li>
                 <NavLink>Khuyến Mãi</NavLink>

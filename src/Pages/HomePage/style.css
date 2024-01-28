@@ -1,0 +1,49 @@
+.category-title {
+  position: relative;
+  padding: 10px 10px 25px 10px;
+  text-align: left;
+}
+
+.category-title span {
+  font-family: Oswald, sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.category-title span::after {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  height: 2px;
+  background-color: #dedcdc;
+  margin-left: 10px;
+}
+
+.ant-card-cover{
+    overflow: hidden;
+}
+
+.ant-card {
+  width: 260px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+
+.ant-card:hover .ant-card-cover img{
+    transform: scale(1.1);   
+    transition-duration: 0.6s;
+}
+
+.ant-card .ant-card-body {
+  padding: 15px;
+  text-align: left;
+}
+
+.ant-card .ant-card-meta-title{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+
+

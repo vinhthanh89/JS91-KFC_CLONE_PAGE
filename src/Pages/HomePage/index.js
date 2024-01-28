@@ -1,7 +1,16 @@
-const HomePage = () => {
-    return (
-        
-    )
-}
+import "./style.css";
+import HomePageCategory from "../../Components/HomePageCategory";
+import HomePageSuggestion from "../../Components/HomePageSuggestion";
+import SlickSlider from "../../Components/SlickSlider";
 
-export default HomePage
+const HomePage = () => {
+  return (
+    <main>
+      <SlickSlider />
+      <HomePageCategory />
+      <HomePageSuggestion />
+    </main>
+  );
+};
+
+export default HomePage;

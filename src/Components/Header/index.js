@@ -23,7 +23,7 @@ const Header = () => {
                 <NavLink>Dịch Vụ Tiệc</NavLink>
               </li>
               <li>
-                <NavLink>Hệ Thống Nhà Hàng</NavLink>
+                <NavLink to="/he-thong-nha-hang-kfc">Hệ Thống Nhà Hàng</NavLink>
               </li>
             </ul>
           </div>

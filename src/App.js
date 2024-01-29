@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import HomePage from "./Pages/HomePage";
+import Restaurants from "./Pages/Restaurants";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/he-thong-nha-hang-kfc" element={<Restaurants />}/>
       </Routes>
       <Footer />
     </div>

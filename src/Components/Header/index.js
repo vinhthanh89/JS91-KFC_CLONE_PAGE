@@ -14,16 +14,16 @@ const Header = () => {
           <div className="navigation">
             <ul className="navigation__menu-bar">
               <li>
-                <NavLink to="/order">Thực Đơn</NavLink>
+                <NavLink to="/order">THỰC ĐƠN</NavLink>
               </li>
               <li>
-                <NavLink>Khuyến Mãi</NavLink>
+                <NavLink>KHUYẾN MÃI</NavLink>
               </li>
               <li>
-                <NavLink>Dịch Vụ Tiệc</NavLink>
+                <NavLink>DỊCH VỤ TIỆC</NavLink>
               </li>
               <li>
-                <NavLink to="/he-thong-nha-hang-kfc">Hệ Thống Nhà Hàng</NavLink>
+                <NavLink to="/he-thong-nha-hang-kfc">HỆ THỐNG NHÀ HÀNG</NavLink>
               </li>
             </ul>
           </div>

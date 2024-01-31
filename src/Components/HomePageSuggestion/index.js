@@ -1,11 +1,10 @@
-import { Card } from "antd";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
 import "./style.css";
+import ProductCard from "../ProductCard";
 
 const HomePageSuggestion = () => {
-  const { Meta } = Card;
   const [data, setData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -21,21 +20,14 @@ const HomePageSuggestion = () => {
     fetchData();
   }, []);
 
-  const renderSuggestionCards = data.map((category) => {
-    return (
-      <div className="category item" key={category.id}>
-        <Card cover={<img alt="example" src={`${category.image}`} />}>
-          <Meta
-            title={`${category.title}  >`}
-            description={`${category.description}`}
-          />
-          <div className="button-container">
-            <button className="button edit-button">Tùy Chỉnh</button>
-            <button className="button add-button">Thêm</button>
-          </div>
-        </Card>
+  const suggestionMenu = data.filter(item => item.kind === "combo sharing")
+
+  const renderSuggestionCards = suggestionMenu.map((category) => {
+    return(
+      <div className="productcard-item" key={category.id}>
+        <ProductCard props={category} />
       </div>
-    );
+    )
   });
 
   return (

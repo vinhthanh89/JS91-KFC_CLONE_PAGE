@@ -1,0 +1,21 @@
+.tabs{
+    color: black;
+    /* border-bottom: 1px solid lightgray; */
+}
+
+.tabs .menu-tab{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Oswald;
+    opacity: 0.6;
+    margin: 0 10px;
+}
+
+.tabs .menu-tab:hover{
+    opacity: 1;
+}
+
+.menu-tab.Mui-selected{
+    opacity: 1;
+    border-bottom: 2px solid red;
+}

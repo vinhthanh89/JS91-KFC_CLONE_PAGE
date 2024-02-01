@@ -11,7 +11,7 @@ const ComboForOne = ({data}) => {
     });
 
     return (
-        <div className="renderdata-container">
+        <div className="renderdata-container" id="comboforone">
         <div className="title">COMBO 1 NGƯỜI</div>
         <div className="productcard--item-container">{renderData}</div>
       </div>

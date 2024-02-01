@@ -1,9 +1,16 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink as RouterNavLink , Link} from 'react-router-dom';
+
+import { animateScroll as scroll } from 'react-scroll';
+// import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import { Facebook, Instagram, Twitter, Youtube } from "react-bootstrap-icons";
 
 import "./style.css";
 
 const Footer = () => {
+  const handleClick = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <footer>
       <div className="footer-container">
@@ -12,28 +19,28 @@ const Footer = () => {
             <span>Danh mục đồ ăn</span>
             <ul>
               <li>
-                <NavLink>Ưu Đãi</NavLink>
+                <RouterNavLink onClick={handleClick} to="/order">Ưu Đãi</RouterNavLink>
               </li>
               <li>
-                <NavLink>Món Mới</NavLink>
+                <RouterNavLink onClick={handleClick} to="/order/new-product">Món Mới</RouterNavLink>
               </li>
               <li>
-                <NavLink>Combo 1 Người</NavLink>
+                <RouterNavLink  to="/order/combo-for-one" onClick={handleClick}>Combo 1 Người</RouterNavLink>
               </li>
               <li>
-                <NavLink>Combo Nhóm</NavLink>
+                <RouterNavLink  onClick={handleClick} to="/order/combo-sharing">Combo Nhóm</RouterNavLink>
               </li>
               <li>
-                <NavLink>Gà Rán - Gà Quay</NavLink>
+                <RouterNavLink  onClick={handleClick} to="/order/fried-chicken">Gà Rán - Gà Quay</RouterNavLink>
               </li>
               <li>
-                <NavLink>Burger - Cơm - Mì Ý</NavLink>
+                <RouterNavLink  onClick={handleClick} to="/order/burger-rice-pasta">Burger - Cơm - Mì Ý</RouterNavLink>
               </li>
               <li>
-                <NavLink>Thức Ăn Nhẹ</NavLink>
+                <RouterNavLink  onClick={handleClick} to="/order/snack">Thức Ăn Nhẹ</RouterNavLink>
               </li>
               <li>
-                <NavLink>Thức Uống & Tráng Miệng</NavLink>
+                <RouterNavLink  onClick={handleClick} to="/order/dessert-drink">Thức Uống & Tráng Miệng</RouterNavLink>
               </li>
             </ul>
           </div>
@@ -41,19 +48,19 @@ const Footer = () => {
             <span>Về KFC</span>
             <ul>
               <li>
-                <NavLink>Câu Chuyện Của Chúng Tôi</NavLink>
+                <RouterNavLink >Câu Chuyện Của Chúng Tôi</RouterNavLink>
               </li>
               <li>
-                <NavLink>Tin Khuyến Mãi</NavLink>
+                <RouterNavLink >Tin Khuyến Mãi</RouterNavLink>
               </li>
               <li>
-                <NavLink>Tin Tức KFC</NavLink>
+                <RouterNavLink >Tin Tức KFC</RouterNavLink>
               </li>
               <li>
-                <NavLink>Tuyển Dụng</NavLink>
+                <RouterNavLink >Tuyển Dụng</RouterNavLink>
               </li>
               <li>
-                <NavLink>Đặt Tiệc Sinh Nhật</NavLink>
+                <RouterNavLink >Đặt Tiệc Sinh Nhật</RouterNavLink>
               </li>
             </ul>
           </div>
@@ -61,13 +68,13 @@ const Footer = () => {
             <span>Liên Hệ KFC</span>
             <ul>
               <li>
-                <NavLink>Theo Dõi Đơn Hàng</NavLink>
+                <RouterNavLink >Theo Dõi Đơn Hàng</RouterNavLink>
               </li>
               <li>
-                <NavLink>Hệ Thống Nhà Hàng</NavLink>
+                <RouterNavLink >Hệ Thống Nhà Hàng</RouterNavLink>
               </li>
               <li>
-                <NavLink>Liên Hệ KFC</NavLink>
+                <RouterNavLink >Liên Hệ KFC</RouterNavLink>
               </li>
             </ul>
           </div>
@@ -75,13 +82,13 @@ const Footer = () => {
             <span>Chính Sách</span>
             <ul>
               <li>
-                <NavLink>Chính Sách Hoạt Động</NavLink>
+                <RouterNavLink >Chính Sách Hoạt Động</RouterNavLink>
               </li>
               <li>
-                <NavLink>Chính Sách Quy Định</NavLink>
+                <RouterNavLink >Chính Sách Quy Định</RouterNavLink>
               </li>
               <li>
-                <NavLink>Chính Sách Bảo Mật Thông Tin</NavLink>
+                <RouterNavLink >Chính Sách Bảo Mật Thông Tin</RouterNavLink>
               </li>
             </ul>
           </div>

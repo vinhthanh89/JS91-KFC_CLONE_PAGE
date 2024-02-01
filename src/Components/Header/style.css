@@ -22,10 +22,17 @@
     cursor: pointer;
 }
 
+.header-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .header-right .icon{
     font-size: 30px;
     margin-left: 15px;
     cursor: pointer;
+    color: black;
 }
 
 .navigation__menu-bar{
@@ -36,6 +43,15 @@
 
 .navigation__menu-bar li{
     margin-left: 20px;
+    width: fit-content;
+}
+
+.navigation__menu-bar li::after{
+    display: block;
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: black;
 }
 
 .navigation__menu-bar li a{
@@ -46,6 +62,7 @@
     font-weight: 700;  
 }
 
-.navigation__menu-bar li a:hover{
-    border-bottom: 2px solid black;
+.navigation__menu-bar li:hover::after{
+    width: 100%;
+    transition: ease 0.5s;
 }

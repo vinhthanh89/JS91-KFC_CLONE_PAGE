@@ -1,5 +1,6 @@
 .productcard-container {
   width: 280px;
+  min-height: 400px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -19,6 +20,14 @@
 .productcard__image img:hover {
   transform: scale(1.1);
   transition-duration: 1s;
+}
+
+.productcard__info {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .productcard__info-container {
@@ -42,14 +51,15 @@
 .productcard__info--title span {
   font-size: 18px;
   font-weight: 900;
+  font-family: Roboto,sans-serif;
 }
 
-.info--title{
+.info--title {
   width: 65%;
   text-align: left;
 }
 
-.info--des p{
+.info--des p {
   font-size: 14px;
   text-align: left;
 }

@@ -2,18 +2,13 @@ import { Link } from "react-router-dom";
 
 import "./style.css";
 
-const ProductCard = ({props}) => {
-    const {image , title , description , price } = props
+const ProductCard = ({ props }) => {
+  const { image, title, description, price } = props;
   return (
     <div className="productcard-container">
       <div className="productcard__image">
         <div className="productcard__image-container">
-
-            <img
-              src={`${image}`}
-              alt=""
-            />
-
+          <img src={`${image}`} alt="" />
         </div>
       </div>
       <div className="productcard__info">
@@ -33,10 +28,10 @@ const ProductCard = ({props}) => {
               <p>{description}</p>
             </div>
           </div>
-          <div className="button-container">
-            <button className="button edit-button">Tùy Chỉnh</button>
-            <button className="button add-button">Thêm</button>
-          </div>
+        </div>
+        <div className="button-container">
+          <button className="button edit-button">Tùy Chỉnh</button>
+          <button className="button add-button">Thêm</button>
         </div>
       </div>
     </div>

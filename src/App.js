@@ -8,14 +8,14 @@ import Footer from "./Components/Footer";
 import HomePage from "./Pages/HomePage";
 import Restaurants from "./Pages/Restaurants";
 import Order from "./Pages/Order";
-import FriedChicken from "./Components/FriedChicken";
-import HotDeal from "./Components/HotDeal";
 import NewProduct from "./Pages/NewProduct";
 import ComboForOne from "./Pages/ComboForOne";
 import ComboSharing from "./Pages/ComboSharing";
 import BurgerRicePasta from "./Pages/BurgerRicePasta";
 import Snack from "./Pages/Snack";
 import DesserDrink from "./Pages/DessertDrink";
+import HotDeal from "./Pages/HotDeal";
+import FriedChicken from "./Pages/FriedChicken";
 
 function App() {
   const [data, setData] = useState([]);

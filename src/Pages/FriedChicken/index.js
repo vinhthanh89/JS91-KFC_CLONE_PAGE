@@ -1,10 +1,12 @@
-import ProductCard from "../ProductCard";
+import ProductCard from "../../Components/ProductCard";
 
-const HotDeal = ({ data }) => {
-  const dataFilter = data.filter((item) => item.kind === "hot deal");
+import "./style.css"
+
+const FriedChicken = ({ data }) => {
+  const dataFilter = data.filter((item) => item.kind === "fried chicken");
   const renderData = dataFilter.map((item) => {
     return (
-     <div className="productcard--item" key={item.id}>
+      <div className="productcard--item" key={item.id}>
         <ProductCard props={item} />
       </div>
     );
@@ -18,4 +20,4 @@ const HotDeal = ({ data }) => {
   );
 };
 
-export default HotDeal;
+export default FriedChicken;

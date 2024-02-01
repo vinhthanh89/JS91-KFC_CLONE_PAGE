@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import {PersonCircle , List} from "react-bootstrap-icons"
 
 import "./style.css";
+import HamburgerMenu from "../HamburgerMenu";
 
 const Header = () => {
   return (
@@ -30,7 +31,7 @@ const Header = () => {
         </div>
         <div className="header-right">
             <PersonCircle className="icon"/>
-            <List className="icon"/>
+            <HamburgerMenu />
         </div>
       </div>
     </header>

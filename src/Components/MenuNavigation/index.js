@@ -30,7 +30,7 @@ const MenuNavigation = () => {
         <Tab onClick={() => {navigate("/order/new-product")}} className="menu-tab" label="Món Mới" />
         <Tab onClick={() => {navigate("/order/combo-for-one")}} className="menu-tab" label="Combo 1 Người" />
         <Tab onClick={() => {navigate("/order/combo-sharing")}} className="menu-tab" label="Combo Nhóm" />
-        <Tab onClick={() => {navigate("/order/fried-rosted-chicken")}} className="menu-tab" label="Gà Rán - Gà Quay" />
+        <Tab onClick={() => {navigate("/order/fried-chicken")}} className="menu-tab" label="Gà Rán - Gà Quay" />
         <Tab onClick={() => {navigate("/order/burger-rice-pasta")}} className="menu-tab" label="Burger - Cơm - Mì Ý" />
         <Tab onClick={() => {navigate("/order/snack")}} className="menu-tab" label="Thức Ăn Nhẹ" />
         <Tab onClick={() => {navigate("/order/dessert-drink")}} className="menu-tab" label="Thức Uống & Tráng Miệng" />

@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import {PersonCircle , List} from "react-bootstrap-icons"
+import {PersonCircle} from "react-bootstrap-icons"
 
 import "./style.css";
 import HamburgerMenu from "../HamburgerMenu";

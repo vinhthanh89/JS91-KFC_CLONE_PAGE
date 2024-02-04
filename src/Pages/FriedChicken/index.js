@@ -3,7 +3,7 @@ import ProductCard from "../../Components/ProductCard";
 import "./style.css"
 
 const FriedChicken = ({ data }) => {
-  const dataFilter = data.filter((item) => item.kind === "fried chicken");
+  const dataFilter = data.filter((item) => item.kind === "fried-chicken");
   const renderData = dataFilter.map((item) => {
     return (
       <div className="productcard--item" key={item.id}>

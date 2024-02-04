@@ -15,13 +15,13 @@ const Header = () => {
           <div className="navigation">
             <ul className="navigation__menu-bar">
               <li>
-                <NavLink to="/order">THỰC ĐƠN</NavLink>
+                <NavLink to="/order/new-product">THỰC ĐƠN</NavLink>
               </li>
               <li>
-                <NavLink>KHUYẾN MÃI</NavLink>
+                <NavLink to="/order/hot-deal">KHUYẾN MÃI</NavLink>
               </li>
               <li>
-                <NavLink>DỊCH VỤ TIỆC</NavLink>
+                <NavLink >DỊCH VỤ TIỆC</NavLink>
               </li>
               <li>
                 <NavLink to="/he-thong-nha-hang-kfc">HỆ THỐNG NHÀ HÀNG</NavLink>

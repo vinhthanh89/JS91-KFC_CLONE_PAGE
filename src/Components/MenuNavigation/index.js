@@ -26,7 +26,7 @@ const MenuNavigation = () => {
         indicatorColor="red"
         aria-label="scrollable auto tabs example"
       >
-        <Tab onClick={() => {navigate("/order")}} className="menu-tab" label="Ưu Đãi" />
+        <Tab onClick={() => {navigate("/order/hot-deal")}} className="menu-tab" label="Ưu Đãi" />
         <Tab onClick={() => {navigate("/order/new-product")}} className="menu-tab" label="Món Mới" />
         <Tab onClick={() => {navigate("/order/combo-for-one")}} className="menu-tab" label="Combo 1 Người" />
         <Tab onClick={() => {navigate("/order/combo-sharing")}} className="menu-tab" label="Combo Nhóm" />

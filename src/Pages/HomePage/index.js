@@ -3,12 +3,12 @@ import HomePageCategory from "../../Components/HomePageCategory";
 import HomePageSuggestion from "../../Components/HomePageSuggestion";
 import SlickSlider from "../../Components/SlickSlider";
 
-const HomePage = () => {
+const HomePage = ({data , orderData}) => {
   return (
     <main>
       <SlickSlider />
-      <HomePageCategory />
-      <HomePageSuggestion />
+      <HomePageCategory orderData={orderData} />
+      <HomePageSuggestion data={data} />
     </main>
   );
 };

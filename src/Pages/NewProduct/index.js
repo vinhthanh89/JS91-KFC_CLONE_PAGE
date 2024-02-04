@@ -1,7 +1,7 @@
 import ProductCard from "../../Components/ProductCard";
 
 const NewProduct = ({data}) => {
-    const dataFilter = data.filter((item) => item.kind === "new product");
+    const dataFilter = data.filter((item) => item.kind === "new-product");
     const renderData = dataFilter.map((item) => {
       return (
         <div className="productcard--item" key={item.id}>

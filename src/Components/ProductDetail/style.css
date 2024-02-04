@@ -14,10 +14,15 @@
 }
 
 .productdetail__order{
+    width: 480px;
+    height: 390px;
     padding: 30px 35px 35px;
     box-shadow: #000000 0px 2px 5px 0px;
     background-color: #ffffff;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .productdetail__order::before{

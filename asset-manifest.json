@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/JS91-KFC_CLONE_PAGE/static/css/main.21720f88.css",
+    "main.css": "/JS91-KFC_CLONE_PAGE/static/css/main.665df4a0.css",
     "main.js": "/JS91-KFC_CLONE_PAGE/static/js/main.41da524f.js",
     "static/js/787.c4df67fb.chunk.js": "/JS91-KFC_CLONE_PAGE/static/js/787.c4df67fb.chunk.js",
     "static/media/slick.svg": "/JS91-KFC_CLONE_PAGE/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -8,12 +8,12 @@
     "static/media/slick.ttf": "/JS91-KFC_CLONE_PAGE/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/JS91-KFC_CLONE_PAGE/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/JS91-KFC_CLONE_PAGE/index.html",
-    "main.21720f88.css.map": "/JS91-KFC_CLONE_PAGE/static/css/main.21720f88.css.map",
+    "main.665df4a0.css.map": "/JS91-KFC_CLONE_PAGE/static/css/main.665df4a0.css.map",
     "main.41da524f.js.map": "/JS91-KFC_CLONE_PAGE/static/js/main.41da524f.js.map",
     "787.c4df67fb.chunk.js.map": "/JS91-KFC_CLONE_PAGE/static/js/787.c4df67fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.21720f88.css",
+    "static/css/main.665df4a0.css",
     "static/js/main.41da524f.js"
   ]
 }

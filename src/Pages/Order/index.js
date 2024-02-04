@@ -2,10 +2,10 @@
 import { Outlet } from "react-router-dom";
 import MenuNavigation from "../../Components/MenuNavigation";
 
-const Order = () => {
+const Order = ({orderData}) => {
   return (
     <>
-      <MenuNavigation />
+      <MenuNavigation orderData={orderData} />
       <Outlet />
     </>
   );

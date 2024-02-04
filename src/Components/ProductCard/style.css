@@ -11,6 +11,7 @@
 
 .productcard__image-container {
   overflow: hidden;
+  cursor: pointer;
 }
 
 .productcard__image img {

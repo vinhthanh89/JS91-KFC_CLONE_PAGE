@@ -6,10 +6,18 @@ import { Facebook, Instagram, Twitter, Youtube } from "react-bootstrap-icons";
 
 import "./style.css";
 
-const Footer = () => {
+const Footer = ({orderData}) => {
   const handleClick = () => {
     scroll.scrollToTop();
   };
+
+  const renderMenuList = orderData.map((category) => {
+    return (
+      <li key={category.id}>
+      <RouterNavLink onClick={handleClick} to={`${category.navigative}`}>{category.title}</RouterNavLink>
+    </li>
+    )
+  })
 
   return (
     <footer>
@@ -18,30 +26,7 @@ const Footer = () => {
           <div className="footer__menu-list">
             <span>Danh mục đồ ăn</span>
             <ul>
-              <li>
-                <RouterNavLink onClick={handleClick} to="/order">Ưu Đãi</RouterNavLink>
-              </li>
-              <li>
-                <RouterNavLink onClick={handleClick} to="/order/new-product">Món Mới</RouterNavLink>
-              </li>
-              <li>
-                <RouterNavLink  to="/order/combo-for-one" onClick={handleClick}>Combo 1 Người</RouterNavLink>
-              </li>
-              <li>
-                <RouterNavLink  onClick={handleClick} to="/order/combo-sharing">Combo Nhóm</RouterNavLink>
-              </li>
-              <li>
-                <RouterNavLink  onClick={handleClick} to="/order/fried-chicken">Gà Rán - Gà Quay</RouterNavLink>
-              </li>
-              <li>
-                <RouterNavLink  onClick={handleClick} to="/order/burger-rice-pasta">Burger - Cơm - Mì Ý</RouterNavLink>
-              </li>
-              <li>
-                <RouterNavLink  onClick={handleClick} to="/order/snack">Thức Ăn Nhẹ</RouterNavLink>
-              </li>
-              <li>
-                <RouterNavLink  onClick={handleClick} to="/order/dessert-drink">Thức Uống & Tráng Miệng</RouterNavLink>
-              </li>
+              {renderMenuList}
             </ul>
           </div>
           <div className="footer__menu-list">

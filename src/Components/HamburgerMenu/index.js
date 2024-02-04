@@ -35,7 +35,7 @@ const HamburgerMenu = () => {
           <div className="burgerlist__title">Danh Mục Món Ăn</div>
           <ul>
             <li>
-              <NavLink to="/order">Ưu Đãi &gt;</NavLink>
+              <NavLink to="/order/hot-deal">Ưu Đãi &gt;</NavLink>
             </li>
             <li>
               <NavLink to="/order/new-product">Món Mới &gt;</NavLink>

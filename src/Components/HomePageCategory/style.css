@@ -12,3 +12,7 @@
   flex-wrap: wrap;
   row-gap: 20px;
 }
+
+.ant-card-cover{
+  border-radius: 8px;
+}

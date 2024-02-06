@@ -55,7 +55,7 @@ function App() {
       <Header />
       <Routes>
         <Route
-          path="/"
+          path="/JS91-KFC_CLONE_PAGE"
           element={<HomePage data={data} orderData={orderData} />}
         />
         <Route path="/order" element={<Order />}>

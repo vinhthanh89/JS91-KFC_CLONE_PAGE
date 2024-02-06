@@ -10,7 +10,7 @@ const Header = () => {
       <div className="header-container">
         <div className="header-navigation">
           <div className="logo-container">
-            <Link to="/JS91-KFC_CLONE_PAGE" className="logo"></Link>
+            <Link to="/" className="logo"></Link>
           </div>
           <div className="navigation">
             <ul className="navigation__menu-bar">

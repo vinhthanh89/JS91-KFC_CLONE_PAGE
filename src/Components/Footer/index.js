@@ -67,13 +67,13 @@ const Footer = ({orderData}) => {
             <span>Chính Sách</span>
             <ul>
               <li>
-                <RouterNavLink >Chính Sách Hoạt Động</RouterNavLink>
+                <RouterNavLink onClick={handleClick} to="/privacy-policy" >Chính Sách Hoạt Động</RouterNavLink>
               </li>
               <li>
-                <RouterNavLink >Chính Sách Quy Định</RouterNavLink>
+                <RouterNavLink onClick={handleClick} to="/terms-condition" >Chính Sách Quy Định</RouterNavLink>
               </li>
               <li>
-                <RouterNavLink >Chính Sách Bảo Mật Thông Tin</RouterNavLink>
+                <RouterNavLink onClick={handleClick} to="/infomation-policy" >Chính Sách Bảo Mật Thông Tin</RouterNavLink>
               </li>
             </ul>
           </div>

@@ -105,13 +105,13 @@ const HamburgerMenu = () => {
           <div className="burgerlist__title">Chính Sách</div>
           <ul>
             <li>
-              <NavLink>Chính Sách Hoạt Động &gt;</NavLink>
+              <NavLink to="/privacy-policy" >Chính Sách Hoạt Động &gt;</NavLink>
             </li>
             <li>
-              <NavLink>Chính Sách Và Quy Định &gt;</NavLink>
+              <NavLink to="/terms-condition">Chính Sách Và Quy Định &gt;</NavLink>
             </li>
             <li>
-              <NavLink>Chính Sách Bảo Mật Thông Tin &gt;</NavLink>
+              <NavLink to="/infomation-policy">Chính Sách Bảo Mật Thông Tin &gt;</NavLink>
             </li>
           </ul>
         </div>

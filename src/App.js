@@ -18,6 +18,9 @@ import HotDeal from "./Pages/HotDeal";
 import FriedChicken from "./Pages/FriedChicken";
 import ProductDetail from "./Components/ProductDetail";
 import LogPage from "./Pages/login-logout/LogPage";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
+import TermsCondition from "./Pages/TermsCondition";
+import InfomationPolicy from "./Pages/InfomationPolicy";
 
 function App() {
   const [orderData, setOrderData] = useState([]);
@@ -106,6 +109,9 @@ function App() {
         </Route>
         <Route path="/he-thong-nha-hang-kfc" element={<Restaurants />} />
         <Route path="/dangnhap" element={<LogPage />}/>
+        <Route path="/privacy-policy" element={<PrivacyPolicy />}/>
+        <Route path="/terms-condition" element={<TermsCondition />}/>
+        <Route path="/infomation-policy" element={<InfomationPolicy />}/>
       </Routes>
       <Footer orderData={orderData} />
     </div>

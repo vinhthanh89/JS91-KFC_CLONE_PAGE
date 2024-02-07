@@ -30,7 +30,7 @@ const Header = () => {
           </div>
         </div>
         <div className="header-right">
-            <PersonCircle className="icon"/>
+            <NavLink to="/dangnhap"><PersonCircle className="icon"/></NavLink>
             <HamburgerMenu />
         </div>
       </div>

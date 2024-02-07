@@ -1,14 +1,34 @@
-import "./style.css";
-import ComboForOne from "../../Pages/ComboForOne";
+import Slider from "react-slick";
 
-const HomePageSuggestion = ({data}) => {
+import "./style.css";
+import ProductCard from "../ProductCard";
+
+const HomePageSuggestion = ({ data }) => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+  };
+
+  const dataFilter = data.filter((item) => item.kind === "combo-for-one");
+  const renderData = dataFilter.map((item) => {
+    return (
+      <div className="productcard--item" key={item.id}>
+        <ProductCard props={item} />
+      </div>
+    );
+  });
 
   return (
     <div className="suggestion-container">
       <div className="category-title">
         <span>CÓ THỂ BẠN SẼ THÍCH</span>
       </div>
-      <div className="suggestio__card-container"><ComboForOne data={data} /></div>
+      <div className="suggestionslider-container">
+        <Slider {...settings}>{renderData}</Slider>
+      </div>
     </div>
   );
 };

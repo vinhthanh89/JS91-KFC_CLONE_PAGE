@@ -6,7 +6,7 @@
   width: 75%;
 }
 
-.suggestio__card-container {
+.suggestion__card-container {
   display: flex;
   column-gap: 20px;
 }
@@ -45,4 +45,16 @@
 .suggestio__card-container .ant-card-cover{
   padding: 10px;
   overflow: hidden;
+}
+
+.suggestionslider-container .slick-list{
+  height: 420px;
+}
+
+.suggestionslider-container .slick-track{
+  padding-top: 10px;
+}
+
+.suggestionslider-container .slick-arrow::before{
+ color: gray;
 }

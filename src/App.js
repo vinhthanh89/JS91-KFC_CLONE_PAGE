@@ -21,6 +21,7 @@ import LogPage from "./Pages/login-logout/LogPage";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import TermsCondition from "./Pages/TermsCondition";
 import InfomationPolicy from "./Pages/InfomationPolicy";
+import AboutUs from "./Pages/AboutUs";
 
 function App() {
   const [orderData, setOrderData] = useState([]);
@@ -112,6 +113,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />}/>
         <Route path="/terms-condition" element={<TermsCondition />}/>
         <Route path="/infomation-policy" element={<InfomationPolicy />}/>
+        <Route path="/about-us" element={<AboutUs />}/>
       </Routes>
       <Footer orderData={orderData} />
     </div>

@@ -33,7 +33,7 @@ const Footer = ({orderData}) => {
             <span>Về KFC</span>
             <ul>
               <li>
-                <RouterNavLink >Câu Chuyện Của Chúng Tôi</RouterNavLink>
+                <RouterNavLink to="/about-us">Câu Chuyện Của Chúng Tôi</RouterNavLink>
               </li>
               <li>
                 <RouterNavLink >Tin Khuyến Mãi</RouterNavLink>

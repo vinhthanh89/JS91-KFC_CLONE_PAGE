@@ -22,6 +22,10 @@ import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import TermsCondition from "./Pages/TermsCondition";
 import InfomationPolicy from "./Pages/InfomationPolicy";
 import AboutUs from "./Pages/AboutUs";
+import ContactUs from "./Pages/ContactUs";
+import AboutYummy from "./Components/AboutYummy";
+import OurHistory from "./Components/OurHistory";
+import OurStory from "./Components/OurStory";
 
 function App() {
   const [orderData, setOrderData] = useState([]);
@@ -109,11 +113,17 @@ function App() {
           />
         </Route>
         <Route path="/he-thong-nha-hang-kfc" element={<Restaurants />} />
-        <Route path="/dangnhap" element={<LogPage />}/>
-        <Route path="/privacy-policy" element={<PrivacyPolicy />}/>
-        <Route path="/terms-condition" element={<TermsCondition />}/>
-        <Route path="/infomation-policy" element={<InfomationPolicy />}/>
-        <Route path="/about-us" element={<AboutUs />}/>
+        <Route path="/dangnhap" element={<LogPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-condition" element={<TermsCondition />} />
+        <Route path="/infomation-policy" element={<InfomationPolicy />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/kfctabs" element={<AboutUs />}>
+          <Route path="our-story" element={<OurStory />}/>
+          <Route path="our-history" element={<OurHistory />}/>
+          <Route path="about-yummy" element={<AboutYummy />} />
+        </Route>
       </Routes>
       <Footer orderData={orderData} />
     </div>

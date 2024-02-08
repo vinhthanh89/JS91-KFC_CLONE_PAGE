@@ -78,19 +78,13 @@ const HamburgerMenu = () => {
           <div className="burgerlist__title">Về KFC</div>
           <ul>
             <li>
-              <NavLink>Câu Chuyện Của Chúng Tôi &gt;</NavLink>
+              <NavLink to="/kfctabs/our-story">Câu Chuyện Của Chúng Tôi &gt;</NavLink>
             </li>
             <li>
-              <NavLink>Tin Khuyến Mãi &gt;</NavLink>
+              <NavLink to="/kfctabs/our-history">Lịch Sử KFC &gt;</NavLink>
             </li>
             <li>
-              <NavLink>Tin Tức KFC &gt;</NavLink>
-            </li>
-            <li>
-              <NavLink>Tuyển Dụng</NavLink>
-            </li>
-            <li>
-              <NavLink>Đặt Tiệc Sinh Nhật</NavLink>
+              <NavLink to="/kfctabs/about-yummy">Về Tập Đoàn YUM! &gt;</NavLink>
             </li>
           </ul>
           <br />
@@ -103,7 +97,7 @@ const HamburgerMenu = () => {
               <NavLink>Theo Dõi Đơn Hàng &gt;</NavLink>
             </li>
             <li>
-              <NavLink>Liên Hệ KFC &gt;</NavLink>
+              <NavLink to="/contact-us">Liên Hệ KFC &gt;</NavLink>
             </li>
           </ul>
           <br />

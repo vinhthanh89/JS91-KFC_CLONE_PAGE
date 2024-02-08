@@ -33,19 +33,13 @@ const Footer = ({orderData}) => {
             <span>Về KFC</span>
             <ul>
               <li>
-                <RouterNavLink to="/about-us">Câu Chuyện Của Chúng Tôi</RouterNavLink>
+                <RouterNavLink onClick={handleClick} to="/kfctabs/our-story">Câu Chuyện Của Chúng Tôi</RouterNavLink>
               </li>
               <li>
-                <RouterNavLink >Tin Khuyến Mãi</RouterNavLink>
+                <RouterNavLink onClick={handleClick} to="/kfctabs/our-history" >Lịch Sử KFC</RouterNavLink>
               </li>
               <li>
-                <RouterNavLink >Tin Tức KFC</RouterNavLink>
-              </li>
-              <li>
-                <RouterNavLink >Tuyển Dụng</RouterNavLink>
-              </li>
-              <li>
-                <RouterNavLink >Đặt Tiệc Sinh Nhật</RouterNavLink>
+                <RouterNavLink onClick={handleClick} to="/kfctabs/about-yummy" >Về Tập Đoàn Yummy!</RouterNavLink>
               </li>
             </ul>
           </div>
@@ -56,10 +50,10 @@ const Footer = ({orderData}) => {
                 <RouterNavLink >Theo Dõi Đơn Hàng</RouterNavLink>
               </li>
               <li>
-                <RouterNavLink >Hệ Thống Nhà Hàng</RouterNavLink>
+                <RouterNavLink to="/he-thong-nha-hang-kfc" onClick={handleClick} >Hệ Thống Nhà Hàng</RouterNavLink>
               </li>
               <li>
-                <RouterNavLink >Liên Hệ KFC</RouterNavLink>
+                <RouterNavLink to="/contact-us" onClick={handleClick}>Liên Hệ KFC</RouterNavLink>
               </li>
             </ul>
           </div>

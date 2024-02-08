@@ -1,10 +1,14 @@
 import { Link, useNavigate } from "react-router-dom";
-
+import { animateScroll as scroll } from 'react-scroll';
 import "./style.css";
 
 const ProductCard = ({ props }) => {
   const { image, title, description, price, kind , id } = props;
   const navigative = useNavigate()
+  const handleClick = () => {
+    navigative(`/order/${kind}/${id}`)
+    scroll.scrollToTop();
+  };
 
   return (
     <div className="productcard-container">
@@ -32,7 +36,7 @@ const ProductCard = ({ props }) => {
           </div>
         </div>
         <div className="button-container">
-          <button className="button edit-button">Tùy Chỉnh</button>
+          <button onClick={handleClick} className="button edit-button">Tùy Chỉnh</button>
           <button className="button add-button">Thêm</button>
         </div>
       </div>

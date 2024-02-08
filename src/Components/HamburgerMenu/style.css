@@ -54,7 +54,7 @@
   content: "";
   width: 0;
   height: 2px;
-  background-color: red;
+  background-color: #e4002b;
 }
 
 .burgerlist-container li:hover::after {

@@ -1,0 +1,93 @@
+
+.ourhistory__top--content {
+  padding: 30px;
+}
+
+.ourhistory-container .ourhistory__top--content p,
+h3,
+h4 {
+  text-align: right;
+}
+
+.ourhistory-container .ourhistory__top--content h3 {
+  font-family: Oswald;
+  font-size: 50px;
+  margin: 0px 0px 20px;
+  line-height: 50px;
+}
+
+.ourhistory-container .ourhistory__top--content p {
+  font-family: Helvetica;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0px 0px 9.94px;
+  padding-left: 30%;
+}
+
+.ourhistory-container .ourhistory__top--content h4 {
+  color: #e4002b;
+  font-family: Oswald;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0px 0px 20px;
+}
+
+.ourhistory__bot--content {
+  position: relative;
+}
+
+.ourhistory__bot--content p {
+  font-family: Helvetica;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0px 0px 10px;
+}
+
+.ourhistory__bot-firstcontent {
+  position: absolute;
+  top: 300px;
+  left: 700px;
+  width: 370px;
+  height: 260px;
+}
+
+.ourhistory__bot-secondcontent {
+  width: 400px;
+  height: 240px;
+  position: absolute;
+  top: 900px;
+  left: 350px;
+}
+
+.ourhistory__bot-thirdcontent {
+  width: 590px;
+  height: 260px;
+  position: absolute;
+  top: 1650px;
+  right: 160px;
+}
+
+.ourhistory__bot-fourthcontent {
+  width: 620px;
+  height: 130px;
+  position: absolute;
+  bottom: 1470px;
+  right: 200px;
+}
+
+.ourhistory__bot-fifthcontent {
+  width: 600px;
+  height: 170px;
+  position: absolute;
+  bottom: 880px;
+  right: 220px;
+}
+
+.ourhistory__bot-sixthcontent {
+  width: 310px;
+  height: 140px;
+  position: absolute;
+  bottom: 500px;
+  right: 590px;
+}

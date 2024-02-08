@@ -1,0 +1,79 @@
+.aboutyummy-container {
+  padding: 0px 10px;
+}
+
+.aboutyummy__firstcontent {
+  position: relative;
+  padding: 80px 0px 55px 285px;
+}
+
+.aboutyummy-container .aboutyummy__firstcontent img {
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  width: 410px;
+  height: 390px;
+}
+
+.aboutyummy__firstcontent h1 {
+  position: absolute;
+  top: 45px;
+  left: 390px;
+  font-family: Oswald;
+  font-size: 49.98px;
+  font-weight: 700;
+  line-height: 75.04px;
+}
+
+.aboutyummy__firstcontent--content {
+  background-color: #ebebeb;
+  padding: 85px 48px 48px 132px;
+  line-height: 23.94px;
+  margin: 0px 0px 25px;
+  font-family: Helvetica;
+  font-size: 16px;
+}
+
+.aboutyummy__secondcontent {
+  padding: 32px 110px 65px 110px;
+}
+
+.aboutyummy__secondcontent :first-child {
+  font-family: Oswald;
+  font-size: 32.06px;
+  font-weight: 900;
+  line-height: 40.04px;
+  margin: 0px 0px 71.96px 483.969px;
+}
+
+.aboutyummy__secondcontent :first-child::before,
+.aboutyummy__secondcontent :first-child::after {
+  display: block;
+  content: "";
+  width: 175px;
+  height: 7px;
+  background-color: black;
+  margin: 10px 0px;
+}
+
+.aboutyummy__secondcontent :last-child {
+  text-align: center;
+  padding: 0px 10px;
+  font-family: Helvetica;
+  font-size: 16px;
+  line-height: 23.94px;
+}
+
+.aboutyummy__thirdcontent{
+    position: relative;
+    padding: 0px 20px;
+}
+
+.aboutyummy__thirdcontent p{
+    color: white;
+    position: absolute;
+    right: 110px;
+    bottom: 60px;
+    width: 500px;
+    height: 400px;
+}

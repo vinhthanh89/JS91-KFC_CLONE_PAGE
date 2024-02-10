@@ -6,21 +6,21 @@ const ProductCard = ({ props }) => {
   const { image, title, description, price, kind , id } = props;
   const navigative = useNavigate()
   const handleClick = () => {
-    navigative(`/order/${kind}/${id}`)
+    navigative(`/order/${kind}/${id}`) 
     scroll.scrollToTop();
   };
 
   return (
     <div className="productcard-container">
       <div className="productcard__image">
-        <div onClick={() => navigative(`/order/${kind}/${id}`)} className="productcard__image-container">
+        <div onClick={handleClick} className="productcard__image-container">
           <img src={`${image}`} alt="" />
         </div>
       </div>
       <div className="productcard__info">
         <div className="productcard__info-container">
           <div className="productcard__info--title">
-            <div onClick={() => navigative(`/order/${kind}/${id}`)}  className="info--title">
+            <div onClick={handleClick}  className="info--title">
               <Link to={`hot-deal/${id}`}>
                 <span>{title}</span>
               </Link>

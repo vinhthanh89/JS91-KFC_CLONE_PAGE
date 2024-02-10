@@ -93,6 +93,10 @@
   font-size: 20px;
 }
 
+.contactus__form--selector{
+  text-align: left;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;

@@ -1,0 +1,32 @@
+.emtycart-test--section {
+    margin-top: 10px;
+    height: 100vh;
+    padding: 80px;
+    background: url(https://static.kfcvietnam.com.vn/images/web/empty-cart.png?v=5.0)
+      no-repeat #f8f7f5 right;
+    background-size: contain;
+  }
+  
+  .emtycart-test--section-content {
+    text-align: left;
+    font-family: "Oswald";
+    font-size: 30px;
+    width: 40%;
+  }
+  
+  .cart-button {
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    background-color: #e4002b;
+    border-radius: 25px;
+    box-shadow: #000000 0px 3px 1px -2px;
+    color: #ffffff;
+    font-family: Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 12px 24px;
+    text-align: center;
+    cursor: pointer;
+  }

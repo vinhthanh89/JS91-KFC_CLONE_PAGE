@@ -1,11 +1,11 @@
 import ProductCard from "../../Components/ProductCard";
 
-const Snack = ({data}) => {
+const Snack = ({data , handleAddProductCart}) => {
     const dataFilter = data.filter((item) => item.kind === "snack");
     const renderData = dataFilter.map((item) => {
       return (
         <div className="productcard--item" key={item.id}>
-          <ProductCard props={item} />
+          <ProductCard handleAddProductCart={handleAddProductCart} props={item} />
         </div>
       );
     });

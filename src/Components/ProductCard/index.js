@@ -1,5 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
+=======
+import { animateScroll as scroll } from 'react-scroll';
+>>>>>>> 59215ee00cfdfc0faa05b44d1a7b69cf96841b51
 import "./style.css";
 import Notification from "../Notification/Notification";
 
@@ -8,6 +12,7 @@ const ProductCard = ({ props }) => {
   const [productQuantity , setProductQuantity] = useState(1);
   const [cartItems, setCartItems] = useState([]);
   const { image, title, description, price, kind , id } = props;
+<<<<<<< HEAD
   const navigative = useNavigate();
   const [showNotification, setShowNotification] = useState(false);
 
@@ -38,6 +43,12 @@ const ProductCard = ({ props }) => {
     }
     setCartItems(updatedCartItems);
     localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+=======
+  const navigative = useNavigate()
+  const handleClick = () => {
+    navigative(`/order/${kind}/${id}`) 
+    scroll.scrollToTop();
+>>>>>>> 59215ee00cfdfc0faa05b44d1a7b69cf96841b51
   };
 
   return (
@@ -48,14 +59,14 @@ const ProductCard = ({ props }) => {
         />
       )}
       <div className="productcard__image">
-        <div onClick={() => navigative(`/order/${kind}/${id}`)} className="productcard__image-container">
+        <div onClick={handleClick} className="productcard__image-container">
           <img src={`${image}`} alt="" />
         </div>
       </div>
       <div className="productcard__info">
         <div className="productcard__info-container">
           <div className="productcard__info--title">
-            <div onClick={() => navigative(`/order/${kind}/${id}`)}  className="info--title">
+            <div onClick={handleClick}  className="info--title">
               <Link to={`hot-deal/${id}`}>
                 <span>{title}</span>
               </Link>
@@ -71,8 +82,13 @@ const ProductCard = ({ props }) => {
           </div>
         </div>
         <div className="button-container">
+<<<<<<< HEAD
           <button onClick={() => navigative(`/order/${kind}/${id}`)} className="button edit-button">Tùy Chỉnh</button>
           <button onClick={addToCart}  className="button add-button">Thêm</button>
+=======
+          <button onClick={handleClick} className="button edit-button">Tùy Chỉnh</button>
+          <button className="button add-button">Thêm</button>
+>>>>>>> 59215ee00cfdfc0faa05b44d1a7b69cf96841b51
         </div>
       </div>
     </div>

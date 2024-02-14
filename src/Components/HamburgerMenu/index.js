@@ -1,6 +1,12 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { List } from "react-bootstrap-icons";
+import { Link, NavLink } from "react-router-dom";
+import {
+  Facebook,
+  Instagram,
+  List,
+  Twitter,
+  Youtube,
+} from "react-bootstrap-icons";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
@@ -31,6 +37,8 @@ const HamburgerMenu = () => {
       onKeyDown={toggleDrawer(false)}
     >
       <div className="burgermenu-container">
+        <div className="triplecolumn-container">
+        </div>
         <div className="burgerlist-container">
           <div className="burgerlist__title">Danh Mục Món Ăn</div>
           <ul>
@@ -70,19 +78,13 @@ const HamburgerMenu = () => {
           <div className="burgerlist__title">Về KFC</div>
           <ul>
             <li>
-              <NavLink>Câu Chuyện Của Chúng Tôi &gt;</NavLink>
+              <NavLink to="/kfctabs/our-story">Câu Chuyện Của Chúng Tôi &gt;</NavLink>
             </li>
             <li>
-              <NavLink>Tin Khuyến Mãi &gt;</NavLink>
+              <NavLink to="/kfctabs/our-history">Lịch Sử KFC &gt;</NavLink>
             </li>
             <li>
-              <NavLink>Tin Tức KFC &gt;</NavLink>
-            </li>
-            <li>
-              <NavLink>Tuyển Dụng</NavLink>
-            </li>
-            <li>
-              <NavLink>Đặt Tiệc Sinh Nhật</NavLink>
+              <NavLink to="/kfctabs/about-yummy">Về Tập Đoàn YUM! &gt;</NavLink>
             </li>
           </ul>
           <br />
@@ -95,7 +97,7 @@ const HamburgerMenu = () => {
               <NavLink>Theo Dõi Đơn Hàng &gt;</NavLink>
             </li>
             <li>
-              <NavLink>Liên Hệ KFC &gt;</NavLink>
+              <NavLink to="/contact-us">Liên Hệ KFC &gt;</NavLink>
             </li>
           </ul>
           <br />
@@ -105,18 +107,43 @@ const HamburgerMenu = () => {
           <div className="burgerlist__title">Chính Sách</div>
           <ul>
             <li>
-              <NavLink>Chính Sách Hoạt Động &gt;</NavLink>
+              <NavLink to="/privacy-policy">Chính Sách Hoạt Động &gt;</NavLink>
             </li>
             <li>
-              <NavLink>Chính Sách Và Quy Định &gt;</NavLink>
+              <NavLink to="/terms-condition">
+                Chính Sách Và Quy Định &gt;
+              </NavLink>
             </li>
             <li>
-              <NavLink>Chính Sách Bảo Mật Thông Tin &gt;</NavLink>
+              <NavLink to="/infomation-policy">
+                Chính Sách Bảo Mật Thông Tin &gt;
+              </NavLink>
             </li>
           </ul>
         </div>
       </div>
-      <div className="burgermenu__footer">.</div>
+      <div className="burgermenu__footer">
+        <div className="social-contact">
+          <Link className="social-icon">
+            <Facebook />
+          </Link>
+          <Link className="social-icon">
+            <Instagram />
+          </Link>
+          <Link className="social-icon">
+            <Youtube />
+          </Link>
+          <Link className="social-icon">
+            <Twitter />
+          </Link>
+        </div>
+        <br />
+        <hr />
+
+        <div className="footer__triplecolumn-container">
+          <p>Copyright © 2023 KFC Vietnam</p>
+        </div>
+      </div>
     </Box>
   );
 

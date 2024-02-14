@@ -33,19 +33,13 @@ const Footer = ({orderData}) => {
             <span>Về KFC</span>
             <ul>
               <li>
-                <RouterNavLink >Câu Chuyện Của Chúng Tôi</RouterNavLink>
+                <RouterNavLink onClick={handleClick} to="/kfctabs/our-story">Câu Chuyện Của Chúng Tôi</RouterNavLink>
               </li>
               <li>
-                <RouterNavLink >Tin Khuyến Mãi</RouterNavLink>
+                <RouterNavLink onClick={handleClick} to="/kfctabs/our-history" >Lịch Sử KFC</RouterNavLink>
               </li>
               <li>
-                <RouterNavLink >Tin Tức KFC</RouterNavLink>
-              </li>
-              <li>
-                <RouterNavLink >Tuyển Dụng</RouterNavLink>
-              </li>
-              <li>
-                <RouterNavLink >Đặt Tiệc Sinh Nhật</RouterNavLink>
+                <RouterNavLink onClick={handleClick} to="/kfctabs/about-yummy" >Về Tập Đoàn Yummy!</RouterNavLink>
               </li>
             </ul>
           </div>
@@ -56,10 +50,10 @@ const Footer = ({orderData}) => {
                 <RouterNavLink >Theo Dõi Đơn Hàng</RouterNavLink>
               </li>
               <li>
-                <RouterNavLink >Hệ Thống Nhà Hàng</RouterNavLink>
+                <RouterNavLink to="/he-thong-nha-hang-kfc" onClick={handleClick} >Hệ Thống Nhà Hàng</RouterNavLink>
               </li>
               <li>
-                <RouterNavLink >Liên Hệ KFC</RouterNavLink>
+                <RouterNavLink to="/contact-us" onClick={handleClick}>Liên Hệ KFC</RouterNavLink>
               </li>
             </ul>
           </div>
@@ -67,13 +61,13 @@ const Footer = ({orderData}) => {
             <span>Chính Sách</span>
             <ul>
               <li>
-                <RouterNavLink >Chính Sách Hoạt Động</RouterNavLink>
+                <RouterNavLink onClick={handleClick} to="/privacy-policy" >Chính Sách Hoạt Động</RouterNavLink>
               </li>
               <li>
-                <RouterNavLink >Chính Sách Quy Định</RouterNavLink>
+                <RouterNavLink onClick={handleClick} to="/terms-condition" >Chính Sách Quy Định</RouterNavLink>
               </li>
               <li>
-                <RouterNavLink >Chính Sách Bảo Mật Thông Tin</RouterNavLink>
+                <RouterNavLink onClick={handleClick} to="/infomation-policy" >Chính Sách Bảo Mật Thông Tin</RouterNavLink>
               </li>
             </ul>
           </div>

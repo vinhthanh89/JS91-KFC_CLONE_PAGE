@@ -1,0 +1,66 @@
+.cart-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .cart-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+  }
+  
+  .cart-item-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .cart-item-details h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .cart-item-details p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .incrementer--button{
+    display: flex;
+    align-items: center;
+}
+
+  .ant-btn{
+    border: none;
+    margin: 0px 10px;
+  }
+
+  .ant-btn.ant-btn-icon-only .anticon{
+    border: none;
+    font-size: 24px;
+  }
+
+  .cart-item-details > button {
+    background-color: #e74c3c; /* Alizarin */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-self: flex-end;
+  }
+
+  .cart-item-details > button:hover {
+    background-color: #c0392b; /* Darken Alizarin */
+  }
+  

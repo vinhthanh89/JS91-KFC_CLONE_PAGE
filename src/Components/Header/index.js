@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import {PersonCircle} from "react-bootstrap-icons"
+import {PersonCircle, Cart} from "react-bootstrap-icons"
 
 import "./style.css";
 import HamburgerMenu from "../HamburgerMenu";
@@ -31,6 +31,7 @@ const Header = () => {
         </div>
         <div className="header-right">
             <NavLink to="/dangnhap"><PersonCircle className="icon"/></NavLink>
+            <NavLink to="/cart"><Cart className="icon"/></NavLink>
             <HamburgerMenu />
         </div>
       </div>

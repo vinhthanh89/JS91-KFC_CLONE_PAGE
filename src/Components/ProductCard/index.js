@@ -46,7 +46,7 @@ const ProductCard = ({ props }) => {
     setCartItems(updatedCartItems);
     localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
   }
-console.log(showNotification)
+
   return (
     <div className="productcard-container">
       {showNotification && (

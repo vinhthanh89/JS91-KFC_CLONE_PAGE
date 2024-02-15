@@ -13,7 +13,7 @@ function CartPage() {
     if (storedCartItems && cartItems.length === 0) {
       setCartItems(storedCartItems);
     }
-  }, [cartItems]);
+  }, [cartItems.length]);
 
   const updateQuantity = (productId, newQuantity) => {
     setCartItems(prevItems =>

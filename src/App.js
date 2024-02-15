@@ -125,9 +125,6 @@ function App() {
           <Route path="our-story" element={<OurStory />}/>
         </Route>
         <Route />
-        {/* <Route path="" element={}/>
-        <Route path="" element={}/>
-        <Route path="" element={}/> */}
         <Route path="/dangnhap" element={<LogPage />}/>
         <Route path="/cart" element={<CartPage />}/>
         <Route path="/contact-us" element={<ContactUs />}/>

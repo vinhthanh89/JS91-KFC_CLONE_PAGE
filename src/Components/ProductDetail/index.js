@@ -23,6 +23,7 @@ const ProductDetail = ({data}) => {
   
   const addToCart = () => {
     setShowNotification(true);
+    console.log(showNotification)
     setTimeout(() => {
       setShowNotification(false);
     }, 3000);

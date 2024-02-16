@@ -10,10 +10,15 @@ import {
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
+import { animateScroll as scroll } from "react-scroll";
 
 import "./style.css";
 
 const HamburgerMenu = () => {
+  const handleClick = () => {
+    scroll.scrollToTop();
+  };
+
   const [state, setState] = useState({
     right: false,
   });
@@ -37,36 +42,47 @@ const HamburgerMenu = () => {
       onKeyDown={toggleDrawer(false)}
     >
       <div className="burgermenu-container">
-        <div className="triplecolumn-container">
-        </div>
+        <div className="triplecolumn-container"></div>
         <div className="burgerlist-container">
           <div className="burgerlist__title">Danh Mục Món Ăn</div>
           <ul>
             <li>
-              <NavLink to="/order/hot-deal">Ưu Đãi &gt;</NavLink>
+              <NavLink onClick={handleClick} to="/order/hot-deal">
+                Ưu Đãi &gt;
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/order/new-product">Món Mới &gt;</NavLink>
+              <NavLink onClick={handleClick} to="/order/new-product">
+                Món Mới &gt;
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/order/combo-for-one">Combo 1 Người &gt;</NavLink>
+              <NavLink onClick={handleClick} to="/order/combo-for-one">
+                Combo 1 Người &gt;
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/order/combo-sharing">Combo Nhóm &gt;</NavLink>
+              <NavLink onClick={handleClick} to="/order/combo-sharing">
+                Combo Nhóm &gt;
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/order/fried-chicken">Gà Rán - Gà Quay &gt;</NavLink>
+              <NavLink onClick={handleClick} to="/order/fried-chicken">
+                Gà Rán - Gà Quay &gt;
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/order/burger-rice-pasta">
+              <NavLink onClick={handleClick} to="/order/burger-rice-pasta">
                 Burger - Cơm - Mì Ý &gt;
               </NavLink>
             </li>
             <li>
-              <NavLink to="/order/snack">Thức Ăn Nhẹ &gt;</NavLink>
+              <NavLink onClick={handleClick} to="/order/snack">
+                Thức Ăn Nhẹ &gt;
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/order/dessert-drink">
+              <NavLink onClick={handleClick} to="/order/dessert-drink">
                 Thức Uống & Tráng Miệng &gt;
               </NavLink>
             </li>
@@ -78,13 +94,19 @@ const HamburgerMenu = () => {
           <div className="burgerlist__title">Về KFC</div>
           <ul>
             <li>
-              <NavLink to="/kfctabs/our-story">Câu Chuyện Của Chúng Tôi &gt;</NavLink>
+              <NavLink onClick={handleClick} to="/kfctabs/our-story">
+                Câu Chuyện Của Chúng Tôi &gt;
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/kfctabs/our-history">Lịch Sử KFC &gt;</NavLink>
+              <NavLink onClick={handleClick} to="/kfctabs/our-history">
+                Lịch Sử KFC &gt;
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/kfctabs/about-yummy">Về Tập Đoàn YUM! &gt;</NavLink>
+              <NavLink onClick={handleClick} to="/kfctabs/about-yummy">
+                Về Tập Đoàn YUM! &gt;
+              </NavLink>
             </li>
           </ul>
           <br />
@@ -97,7 +119,9 @@ const HamburgerMenu = () => {
               <NavLink>Theo Dõi Đơn Hàng &gt;</NavLink>
             </li>
             <li>
-              <NavLink to="/contact-us">Liên Hệ KFC &gt;</NavLink>
+              <NavLink onClick={handleClick} to="/contact-us">
+                Liên Hệ KFC &gt;
+              </NavLink>
             </li>
           </ul>
           <br />
@@ -107,15 +131,17 @@ const HamburgerMenu = () => {
           <div className="burgerlist__title">Chính Sách</div>
           <ul>
             <li>
-              <NavLink to="/privacy-policy">Chính Sách Hoạt Động &gt;</NavLink>
+              <NavLink onClick={handleClick} to="/privacy-policy">
+                Chính Sách Hoạt Động &gt;
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/terms-condition">
+              <NavLink onClick={handleClick} to="/terms-condition">
                 Chính Sách Và Quy Định &gt;
               </NavLink>
             </li>
             <li>
-              <NavLink to="/infomation-policy">
+              <NavLink onClick={handleClick} to="/infomation-policy">
                 Chính Sách Bảo Mật Thông Tin &gt;
               </NavLink>
             </li>

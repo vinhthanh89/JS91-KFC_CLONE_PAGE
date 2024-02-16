@@ -1,7 +1,6 @@
 import { NavLink as RouterNavLink , Link} from 'react-router-dom';
 
 import { animateScroll as scroll } from 'react-scroll';
-// import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import { Facebook, Instagram, Twitter, Youtube } from "react-bootstrap-icons";
 
 import "./style.css";

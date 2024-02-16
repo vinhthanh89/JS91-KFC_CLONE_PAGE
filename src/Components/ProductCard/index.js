@@ -26,7 +26,6 @@ const ProductCard = ({ props }) => {
 
   const addToCart = () => {
     setShowNotification(true);
-    console.log(showNotification)
     setTimeout(() => {
       setShowNotification(false);
     }, 3000);

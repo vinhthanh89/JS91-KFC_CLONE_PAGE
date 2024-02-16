@@ -35,19 +35,6 @@ function CartPage() {
     setCartItems([]);
     localStorage.removeItem('cartItems');
   };
-
-  // const updateLocalStorage = (productId, productQuantity) => {
-  //   const updatedCartItems = cartItems.map(item =>
-  //     item.id === productId ? { ...item, productQuantity } : item
-  //   );
-  //   localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
-    
-  // };
-
-  // const updateLocalStorage = productId => {
-  //   const updatedCartItems = cartItems.filter(item => item.id !== productId);
-  //   localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
-  // };
   
   const updateLocalStorage = (productId, productQuantity = null) => {
     if (productQuantity === 0) {

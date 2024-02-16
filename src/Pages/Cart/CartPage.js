@@ -25,14 +25,10 @@ function CartPage() {
   };
 
   const removeItem = productId => {
-    // setCartItems(prevItems =>
-    //   prevItems.filter(item => item.id !== productId)
-    // );
-    // updateLocalStorage(productId, 0);
     setCartItems(prevItems =>
       prevItems.filter(item => item.id !== productId)
     );
-    updateLocalStorage(productId);
+    updateLocalStorage(productId, 0);
   };
 
   const removeAllItems = () => {
@@ -41,18 +37,29 @@ function CartPage() {
   };
 
   // const updateLocalStorage = (productId, productQuantity) => {
-  //   // const updatedCartItems = cartItems.map(item =>
-  //   //   item.id === productId ? { ...item, productQuantity } : item
-  //   // );
-  //   // localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+  //   const updatedCartItems = cartItems.map(item =>
+  //     item.id === productId ? { ...item, productQuantity } : item
+  //   );
+  //   localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
     
   // };
 
-  const updateLocalStorage = productId => {
-    const updatedCartItems = cartItems.filter(item => item.id !== productId);
-    localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
-  };
+  // const updateLocalStorage = productId => {
+  //   const updatedCartItems = cartItems.filter(item => item.id !== productId);
+  //   localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+  // };
   
+  const updateLocalStorage = (productId, productQuantity = null) => {
+    if (productQuantity === 0) {
+      const updatedCartItems = cartItems.filter(item => item.id !== productId);
+      localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+    } else {
+      const updatedCartItems = cartItems.map(item =>
+        item.id === productId ? { ...item, productQuantity } : item
+      );
+      localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+    }
+  };
 
   const totalPrice = cartItems.reduce(
     (total, item) => total + item.price * item.productQuantity,

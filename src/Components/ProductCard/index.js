@@ -17,7 +17,7 @@ const ProductCard = ({ props }) => {
     if (storedCartItems) {
       setCartItems(storedCartItems);
     }
-  }, [id]);
+  }, [cartItems]);
 
   const handleClick = () => {
     navigative(`/order/${kind}/${id}`) 
@@ -44,6 +44,7 @@ const ProductCard = ({ props }) => {
       });
     }
     setCartItems(updatedCartItems);
+    setProductQuantity(1);
     localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
   }
 
@@ -51,7 +52,7 @@ const ProductCard = ({ props }) => {
     <div className="productcard-container">
       {showNotification && (
         <Notification
-          message={`${productQuantity} ${title} đã được thêm vào giỏ hàng`}
+          message={`0${productQuantity} x ${title} đã được thêm vào giỏ hàng`}
         />
       )}
       <div className="productcard__image">

@@ -27,6 +27,7 @@ import OurStory from "./Components/OurStory"
 import InfomationPolicy from "./Pages/InfomationPolicy"
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import TermsCondition from "./Pages/TermsCondition";
+import TestCart from "./Pages/TestCart"
 
 
 function App() {

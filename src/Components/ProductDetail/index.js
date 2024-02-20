@@ -1,9 +1,18 @@
 import { PlusCircleOutlined, MinusCircleOutlined } from "@ant-design/icons";
 import { Button } from "antd";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
 import "./style.css";
+import Notification from "../Notification/Notification";
+
+const ProductDetail = ({ data }) => {
+  const [productQuantity, setProductQuantity] = useState(1);
+  const [cartItems, setCartItems] = useState([]);
+  const [showNotification, setShowNotification] = useState(false);
+  const urlParam = useParams();
+  const foundObject = data.find((item) => item.id === urlParam.productId) || [];
+  const { image, title, description, price, id } = foundObject;
+
 
 const ProductDetail = ({ data , handleAddProductCart }) => {
   const [productCounter, setProductCounter] = useState(1);
@@ -40,6 +49,7 @@ const ProductDetail = ({ data , handleAddProductCart }) => {
           <div className="productdetail__order--button">
             <div className="incrementer--button">
               <Button
+
                 disabled={productCounter <= 1 ? "disabled" : ""}
                 icon={
                   <MinusCircleOutlined
@@ -49,18 +59,23 @@ const ProductDetail = ({ data , handleAddProductCart }) => {
                 }
               />
               <span>{productCounter}</span>
+
               <Button
                 icon={
                   <PlusCircleOutlined
                     className="incrementer--increase"
+
                     onClick={() => setProductCounter(productCounter + 1)}
+
                   />
                 }
               />
             </div>
             <div className="addcart--button">
+
               <button onClick={handleAddProduct}>{`Thêm vào giỏ ( ${(
                 productCounter * price
+
               ).toLocaleString()}đ )`}</button>
             </div>
           </div>

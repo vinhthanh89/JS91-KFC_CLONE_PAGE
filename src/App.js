@@ -18,15 +18,16 @@ import HotDeal from "./Pages/HotDeal";
 import FriedChicken from "./Pages/FriedChicken";
 import ProductDetail from "./Components/ProductDetail";
 import LogPage from "./Pages/login-logout/LogPage";
+import CartPage from "./Pages/Cart/CartPage";
+import ContactUs from "./Pages/ContactUs";
+import AboutUs from "./Pages/AboutUs";
+import AboutYummy from "./Components/AboutYummy"
+import OurHistory from "./Components/OurHistory"
+import OurStory from "./Components/OurStory"
+import InfomationPolicy from "./Pages/InfomationPolicy"
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import TermsCondition from "./Pages/TermsCondition";
-import InfomationPolicy from "./Pages/InfomationPolicy";
-import AboutUs from "./Pages/AboutUs";
-import ContactUs from "./Pages/ContactUs";
-import AboutYummy from "./Components/AboutYummy";
-import OurHistory from "./Components/OurHistory";
-import OurStory from "./Components/OurStory";
-import TestCart from "./Pages/TestCart";
+
 
 function App() {
   const [orderData, setOrderData] = useState([]);
@@ -274,17 +275,20 @@ function App() {
           />
         </Route>
         <Route path="/he-thong-nha-hang-kfc" element={<Restaurants />} />
-        <Route path="/dangnhap" element={<LogPage />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/terms-condition" element={<TermsCondition />} />
-        <Route path="/infomation-policy" element={<InfomationPolicy />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/infomation-policy" element={<InfomationPolicy />}/>
+        <Route path="/privacy-policy" element={<PrivacyPolicy />}/>
+        <Route path="/terms-condition" element={<TermsCondition />}/>
         <Route path="/kfctabs" element={<AboutUs />}>
-          <Route path="our-story" element={<OurStory />} />
-          <Route path="our-history" element={<OurHistory />} />
-          <Route path="about-yummy" element={<AboutYummy />} />
+
+          <Route path="about-yummy" element={<AboutYummy />}/>
+          <Route path="our-history" element={<OurHistory />}/>
+          <Route path="our-story" element={<OurStory />}/>
+
         </Route>
+        <Route />
+        <Route path="/dangnhap" element={<LogPage />}/>
+        <Route path="/cart" element={<CartPage />}/>
+        <Route path="/contact-us" element={<ContactUs />}/>
       </Routes>
       <Footer orderData={orderData} />
     </div>

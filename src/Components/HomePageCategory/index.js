@@ -1,5 +1,4 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+
 import { useNavigate } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 import { Card } from "antd";

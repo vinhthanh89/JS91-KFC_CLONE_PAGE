@@ -1,75 +1,100 @@
-header{
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 1;
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 9999;
 }
 
-.header-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
-    border-bottom: 1px solid black;
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  border-bottom: 1px solid black;
 }
 
-.header-navigation{
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header-container a {
+  text-decoration: none;
 }
 
-.logo-container a{
-    display: inline-block;
-    width: 78px;
-    height: 78px;
-    background-image: url(https://static.kfcvietnam.com.vn/images/web/kfc-logo.svg?v=5.0);
-    background-repeat: no-repeat;   
-    cursor: pointer;
+.header-navigation {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header-right{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.logo-container a {
+  display: inline-block;
+  width: 78px;
+  height: 78px;
+  background-image: url(https://static.kfcvietnam.com.vn/images/web/kfc-logo.svg?v=5.0);
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
-.header-right .icon{
-    font-size: 30px;
-    margin-left: 15px;
-    cursor: pointer;
-    color: black;
+.header-right {
+    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.navigation__menu-bar{
-    display: flex;
-    list-style: none;
-    column-gap: 10px;
+.header-right--icon {
+  font-size: 30px;
+  margin-left: 15px;
+  cursor: pointer;
+  color: black;
 }
 
-.navigation__menu-bar li{
-    margin-left: 20px;
-    width: fit-content;
+.header-right .icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
 }
 
-.navigation__menu-bar li::after{
-    display: block;
-    content: "";
-    width: 0;
-    height: 2px;
-    background-color: black;
+.navigation__menu-bar {
+  display: flex;
+  list-style: none;
+  column-gap: 10px;
 }
 
-.navigation__menu-bar li a{
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    font-family: Roboto;
-    font-weight: 700;  
+.navigation__menu-bar li {
+  margin-left: 20px;
+  width: fit-content;
 }
 
-.navigation__menu-bar li:hover::after{
-    width: 100%;
-    transition: ease 0.5s;
+.navigation__menu-bar li::after {
+  display: block;
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: black;
+}
+
+.navigation__menu-bar li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-family: Roboto;
+  font-weight: 700;
+}
+
+.navigation__menu-bar li:hover::after {
+  width: 100%;
+  transition: ease 0.5s;
+}
+
+.cart-icon-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  color: whitesmoke;
+  background-color: #e4002b;
 }

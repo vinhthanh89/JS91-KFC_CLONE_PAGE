@@ -1,0 +1,26 @@
+.cart-test-container {
+  position: relative;
+  padding: 0px 40px;
+}
+
+.cart-test-container::before {
+  position: absolute;
+  top: 0;
+  left: 64px;
+  content: "";
+  display: block;
+  width: 12px;
+  height: 30px;
+  box-shadow: inset 0 0 0 32px #e4002b, -22px 0 #e4002b, 22px 0 #e4002b;
+  margin-bottom: 20px;
+}
+
+.cart-test--title {
+  text-align: left;
+  font-family: Oswald;
+  font-size: 25px;
+  font-weight: 700;
+  padding-top: 40px;
+}
+
+

@@ -13,45 +13,27 @@ const ProductDetail = ({ data }) => {
   const foundObject = data.find((item) => item.id === urlParam.productId) || [];
   const { image, title, description, price, id } = foundObject;
 
-  useEffect(() => {
-    const storedCartItems = JSON.parse(localStorage.getItem("cartItems"));
-    if (storedCartItems) {
-      setCartItems(storedCartItems);
-    }
-  }, [id]);
 
-  const addToCart = () => {
-    setShowNotification(true);
-    console.log(showNotification);
-    setTimeout(() => {
-      setShowNotification(false);
-    }, 3000);
-    const updatedCartItems = [...cartItems];
-    const existingItemIndex = updatedCartItems.findIndex(
-      (item) => item.id === id
-    );
-    if (existingItemIndex !== -1) {
-      updatedCartItems[existingItemIndex].productQuantity += productQuantity;
-    } else {
-      updatedCartItems.push({
-        id: id,
-        title: title,
-        price: price,
-        image: image,
-        productQuantity: productQuantity,
-      });
-    }
-    setCartItems(updatedCartItems);
-    localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
-  };
+const ProductDetail = ({ data , handleAddProductCart }) => {
+  const [productCounter, setProductCounter] = useState(1);
+  const urlParam = useParams();
+  const foundObject = data.find((item) => item.id === urlParam.productId) || [];
+  const { id , image, title, description, price } = foundObject;
+  const productLocal = {
+    image : image,
+    title : title,
+    description : description,
+    price : price,
+    quantity : productCounter,
+    id : id,
+  }
+
+  const handleAddProduct = () => {
+    handleAddProductCart(productLocal);
+  }
 
   return (
     <div className="productdetail-container">
-      {showNotification && (
-        <Notification
-          message={`${productQuantity} ${title} đã được thêm vào giỏ hàng`}
-        />
-      )}
       <div className="productdetail__image">
         <img src={`${image}`} alt="" />
       </div>
@@ -67,27 +49,33 @@ const ProductDetail = ({ data }) => {
           <div className="productdetail__order--button">
             <div className="incrementer--button">
               <Button
-                disabled={productQuantity <= 1 ? "disabled" : ""}
+
+                disabled={productCounter <= 1 ? "disabled" : ""}
                 icon={
                   <MinusCircleOutlined
                     className="incrementer--decrease"
-                    onClick={() => setProductQuantity(productQuantity - 1)}
+                    onClick={() => setProductCounter(productCounter - 1)}
                   />
                 }
               />
-              <span>{productQuantity}</span>
+              <span>{productCounter}</span>
+
               <Button
                 icon={
                   <PlusCircleOutlined
                     className="incrementer--increase"
-                    onClick={() => setProductQuantity(productQuantity + 1)}
+
+                    onClick={() => setProductCounter(productCounter + 1)}
+
                   />
                 }
               />
             </div>
             <div className="addcart--button">
-              <button onClick={addToCart}>{`Thêm vào giỏ ( ${(
-                productQuantity * price
+
+              <button onClick={handleAddProduct}>{`Thêm vào giỏ ( ${(
+                productCounter * price
+
               ).toLocaleString()}đ )`}</button>
             </div>
           </div>

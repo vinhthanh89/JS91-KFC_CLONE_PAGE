@@ -1,0 +1,96 @@
+.cart--section-container {
+  margin: 30px 0px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.productcart-container {
+  width: 60%;
+}
+
+.paycart-container {
+  width: 35%;
+}
+
+.paycart-container {
+  position: sticky;
+  top: 120px;
+  height: 100%;
+  padding: 30px;
+  box-shadow: #000000 0px 0px 5px 0px;
+  border-radius: 15px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid lightgray;
+  padding: 15px 0px;
+}
+
+.paycart__title {
+  font-weight: 700;
+  font-family: Oswald;
+  font-size: 28px;
+}
+
+.paycart__coupon p {
+  font-weight: 700;
+  font-size: 16px;
+  font-family: Helvetica;
+  margin-bottom: 20px;
+}
+
+.paycart__coupon--input {
+  column-gap: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.paycart__coupon--input input {
+  flex: 1;
+  padding: 5px;
+  font-size: 15px;
+  outline: none;
+}
+
+.paycart__coupon--input button {
+  background-color: black;
+  color: whitesmoke;
+  font-size: 14px;
+  outline: none;
+  padding: 5px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.paycart__total-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.pay-total {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.paycart__button {
+  margin-top: 20px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4002b;
+  color: whitesmoke;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.paycart__button:hover{
+  opacity: 1;
+}

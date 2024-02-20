@@ -29,10 +29,12 @@ import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import TermsCondition from "./Pages/TermsCondition";
 
 
-
 function App() {
   const [orderData, setOrderData] = useState([]);
   const [data, setData] = useState([]);
+  const [cartLocalData, setCartLocalData] = useState(
+    JSON.parse(localStorage.getItem("dataCart")) || []
+  );
 
   useEffect(() => {
     const fetchOrderData = async () => {
@@ -62,57 +64,214 @@ function App() {
     fetchFoodData();
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem("dataCart", JSON.stringify(cartLocalData));
+  }, [cartLocalData]);
+
+  const handleAddProductCart = (productCart) => {
+    const item = cartLocalData.find((item) => item.id === productCart.id);
+    if (!item) {
+      setCartLocalData([...cartLocalData, productCart]);
+    } else {
+      item.quantity += productCart.quantity;
+    }
+  };
+
+  const handleDeleteProductCart = (productId) => {
+    setCartLocalData((prev) =>
+      prev.filter((productItem) => productItem.id !== productId)
+    );
+  };
+
+  const handleIncreProductQuantity = (productId) => {
+    setCartLocalData((prev) =>
+      prev.map((productItem) =>
+        productItem.id === productId
+          ? { ...productItem, quantity: productItem.quantity + 1 }
+          : productItem
+      )
+    );
+  };
+
+  const handleDecreProductQuantity = (productId) => {
+    setCartLocalData((prev) =>
+      prev.map((productItem) =>
+        productItem.id === productId
+          ? { ...productItem, quantity: productItem.quantity - 1 }
+          : productItem
+      )
+    );
+  };
+
   return (
     <div className="App">
-      <Header />
+      <Header cartLocalData={cartLocalData} />
+      <Routes>
+        <Route
+          path="/test"
+          element={
+            <TestCart
+              cartLocalData={cartLocalData}
+              handleDeleteProductCart={handleDeleteProductCart}
+              handleIncreProductQuantity={handleIncreProductQuantity}
+              handleDecreProductQuantity={handleDecreProductQuantity}
+            />
+          }
+        />
+      </Routes>
       <Routes>
         <Route
           path="/"
-          element={<HomePage data={data} orderData={orderData} />}
+          element={
+            <HomePage
+              handleAddProductCart={handleAddProductCart}
+              data={data}
+              orderData={orderData}
+
+            />
+          }
         />
         <Route path="/order" element={<Order />}>
-          <Route path="hot-deal" element={<HotDeal data={data} />} />
+          <Route
+            path="hot-deal"
+            element={
+              <HotDeal
+                handleAddProductCart={handleAddProductCart}
+                data={data}
+              />
+            }
+          />
           <Route
             path="hot-deal/:productId"
-            element={<ProductDetail data={data} />}
+            element={
+              <ProductDetail
+                handleAddProductCart={handleAddProductCart}
+                data={data}
+              />
+            }
           />
-          <Route path="new-product" element={<NewProduct data={data} />} />
+          <Route
+            path="new-product"
+            element={
+              <NewProduct
+                handleAddProductCart={handleAddProductCart}
+                data={data}
+              />
+            }
+          />
           <Route
             path="new-product/:productId"
-            element={<ProductDetail data={data} />}
+            element={
+              <ProductDetail
+                handleAddProductCart={handleAddProductCart}
+                data={data}
+              />
+            }
           />
-          <Route path="combo-for-one" element={<ComboForOne data={data} />} />
+          <Route
+            path="combo-for-one"
+            element={
+              <ComboForOne
+                handleAddProductCart={handleAddProductCart}
+                data={data}
+              />
+            }
+          />
           <Route
             path="combo-for-one/:productId"
-            element={<ProductDetail data={data} />}
+            element={
+              <ProductDetail
+                handleAddProductCart={handleAddProductCart}
+                data={data}
+              />
+            }
           />
-          <Route path="combo-sharing" element={<ComboSharing data={data} />} />
+          <Route
+            path="combo-sharing"
+            element={
+              <ComboSharing
+                handleAddProductCart={handleAddProductCart}
+                data={data}
+              />
+            }
+          />
           <Route
             path="combo-sharing/:productId"
-            element={<ProductDetail data={data} />}
+            element={
+              <ProductDetail
+                handleAddProductCart={handleAddProductCart}
+                data={data}
+              />
+            }
           />
-          <Route path="fried-chicken" element={<FriedChicken data={data} />} />
+          <Route
+            path="fried-chicken"
+            element={
+              <FriedChicken
+                handleAddProductCart={handleAddProductCart}
+                data={data}
+              />
+            }
+          />
           <Route
             path="fried-chicken/:productId"
-            element={<ProductDetail data={data} />}
+            element={
+              <ProductDetail
+                handleAddProductCart={handleAddProductCart}
+                data={data}
+              />
+            }
           />
           <Route
             path="burger-rice-pasta"
-            element={<BurgerRicePasta data={data} />}
+            element={
+              <BurgerRicePasta
+                handleAddProductCart={handleAddProductCart}
+                data={data}
+              />
+            }
           />
           <Route
             path="burger-rice-pasta/:productId"
-            element={<ProductDetail data={data} />}
+            element={
+              <ProductDetail
+                handleAddProductCart={handleAddProductCart}
+                data={data}
+              />
+            }
           />
-          <Route path="snack" element={<Snack data={data} />} />
+          <Route
+            path="snack"
+            element={
+              <Snack handleAddProductCart={handleAddProductCart} data={data} />
+            }
+          />
           <Route
             path="snack/:productId"
-            element={<ProductDetail data={data} />}
+            element={
+              <ProductDetail
+                handleAddProductCart={handleAddProductCart}
+                data={data}
+              />
+            }
           />
-          <Route path="dessert-drink" element={<DesserDrink data={data} />} />
+          <Route
+            path="dessert-drink"
+            element={
+              <DesserDrink
+                handleAddProductCart={handleAddProductCart}
+                data={data}
+              />
+            }
+          />
           <Route
             path="dessert-drink/:productId"
-            element={<ProductDetail data={data} />}
+            element={
+              <ProductDetail
+                handleAddProductCart={handleAddProductCart}
+                data={data}
+              />
+            }
           />
         </Route>
         <Route path="/he-thong-nha-hang-kfc" element={<Restaurants />} />
@@ -120,9 +279,11 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />}/>
         <Route path="/terms-condition" element={<TermsCondition />}/>
         <Route path="/kfctabs" element={<AboutUs />}>
+
           <Route path="about-yummy" element={<AboutYummy />}/>
           <Route path="our-history" element={<OurHistory />}/>
           <Route path="our-story" element={<OurStory />}/>
+
         </Route>
         <Route />
         <Route path="/dangnhap" element={<LogPage />}/>

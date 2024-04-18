@@ -2,7 +2,6 @@ import { Link, useNavigate } from "react-router-dom";
 // import { useState, useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
 import "./style.css";
-import Notification from "../Notification/Notification";
 
 const ProductCard = ({ props, handleAddProductCart }) => {
   const { image, title, description, price, kind, id } = props;

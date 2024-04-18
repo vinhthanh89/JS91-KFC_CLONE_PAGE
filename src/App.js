@@ -1,34 +1,33 @@
-import { Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
-import Header from "./Components/Header";
+import AboutYummy from "./Components/AboutYummy";
 import Footer from "./Components/Footer";
-import HomePage from "./Pages/HomePage";
-import Restaurants from "./Pages/Restaurants";
-import Order from "./Pages/Order";
-import NewProduct from "./Pages/NewProduct";
+import Header from "./Components/Header";
+import OurHistory from "./Components/OurHistory";
+import OurStory from "./Components/OurStory";
+import ProductDetail from "./Components/ProductDetail";
+import AboutUs from "./Pages/AboutUs";
+import BurgerRicePasta from "./Pages/BurgerRicePasta";
 import ComboForOne from "./Pages/ComboForOne";
 import ComboSharing from "./Pages/ComboSharing";
-import BurgerRicePasta from "./Pages/BurgerRicePasta";
-import Snack from "./Pages/Snack";
-import DesserDrink from "./Pages/DessertDrink";
-import HotDeal from "./Pages/HotDeal";
-import FriedChicken from "./Pages/FriedChicken";
-import ProductDetail from "./Components/ProductDetail";
-import LogPage from "./Pages/login-logout/LogPage";
-import CartPage from "./Pages/Cart/CartPage";
 import ContactUs from "./Pages/ContactUs";
-import AboutUs from "./Pages/AboutUs";
-import AboutYummy from "./Components/AboutYummy"
-import OurHistory from "./Components/OurHistory"
-import OurStory from "./Components/OurStory"
-import InfomationPolicy from "./Pages/InfomationPolicy"
+import DesserDrink from "./Pages/DessertDrink";
+import FriedChicken from "./Pages/FriedChicken";
+import HomePage from "./Pages/HomePage";
+import HotDeal from "./Pages/HotDeal";
+import InfomationPolicy from "./Pages/InfomationPolicy";
+import LoginPage from "./Pages/LoginPage";
+import NewProduct from "./Pages/NewProduct";
+import Order from "./Pages/Order";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
+import Restaurants from "./Pages/Restaurants";
+import Snack from "./Pages/Snack";
 import TermsCondition from "./Pages/TermsCondition";
-import TestCart from "./Pages/TestCart"
-
+import TestCart from "./Pages/TestCart";
+import SignUp from "./Pages/SignUp";
 
 function App() {
   const [orderData, setOrderData] = useState([]);
@@ -109,7 +108,7 @@ function App() {
       <Header cartLocalData={cartLocalData} />
       <Routes>
         <Route
-          path="/test"
+          path="/cart"
           element={
             <TestCart
               cartLocalData={cartLocalData}
@@ -128,7 +127,6 @@ function App() {
               handleAddProductCart={handleAddProductCart}
               data={data}
               orderData={orderData}
-
             />
           }
         />
@@ -276,20 +274,18 @@ function App() {
           />
         </Route>
         <Route path="/he-thong-nha-hang-kfc" element={<Restaurants />} />
-        <Route path="/infomation-policy" element={<InfomationPolicy />}/>
-        <Route path="/privacy-policy" element={<PrivacyPolicy />}/>
-        <Route path="/terms-condition" element={<TermsCondition />}/>
+        <Route path="/infomation-policy" element={<InfomationPolicy />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-condition" element={<TermsCondition />} />
         <Route path="/kfctabs" element={<AboutUs />}>
-
-          <Route path="about-yummy" element={<AboutYummy />}/>
-          <Route path="our-history" element={<OurHistory />}/>
-          <Route path="our-story" element={<OurStory />}/>
-
+          <Route path="about-yummy" element={<AboutYummy />} />
+          <Route path="our-history" element={<OurHistory />} />
+          <Route path="our-story" element={<OurStory />} />
         </Route>
         <Route />
-        <Route path="/dangnhap" element={<LogPage />}/>
-        <Route path="/cart" element={<CartPage />}/>
-        <Route path="/contact-us" element={<ContactUs />}/>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
       <Footer orderData={orderData} />
     </div>

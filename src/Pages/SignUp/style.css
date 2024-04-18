@@ -1,0 +1,15 @@
+
+.signup-container{
+    padding: 20px 200px;
+}
+
+.signup__form-container{
+    padding: 30px 50px 10px 50px;
+    margin-top: 10px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 18px;
+}
+
+.signup__submit-btn{
+    margin-top: 40px;
+}

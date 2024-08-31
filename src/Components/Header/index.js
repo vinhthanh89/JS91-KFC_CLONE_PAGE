@@ -1,14 +1,15 @@
-import { Link, NavLink } from "react-router-dom";
-import { PersonCircle, CartFill } from "react-bootstrap-icons";
+import { CartFill, PersonCircle } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 
-import "./style.css";
 import HamburgerMenu from "../HamburgerMenu";
+import "./style.css";
 
 const Header = ({ cartLocalData }) => {
   const handleClick = () => {
     scroll.scrollToTop();
   };
+  
   return (
     <header>
       <div className="header-container">

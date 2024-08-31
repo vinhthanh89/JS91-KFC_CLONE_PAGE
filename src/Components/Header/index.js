@@ -14,39 +14,39 @@ const Header = ({ cartLocalData }) => {
       <div className="header-container">
         <div className="header-navigation">
           <div className="logo-container">
-            <Link onClick={handleClick} to="/" className="logo"></Link>
+            <Link onClick={handleClick} to="/JS91-KFC_CLONE_PAGE" className="logo"></Link>
           </div>
           <div className="navigation">
             <ul className="navigation__menu-bar">
               <li>
-                <NavLink onClick={handleClick} to="/order/new-product">
+                <Link onClick={handleClick} to="JS91-KFC_CLONE_PAGE/order/new-product">
                   THỰC ĐƠN
-                </NavLink>
+                </Link>
               </li>
               <li>
-                <NavLink onClick={handleClick} to="/order/hot-deal">
+                <Link onClick={handleClick} to="JS91-KFC_CLONE_PAGE/order/hot-deal">
                   KHUYẾN MÃI
-                </NavLink>
+                </Link>
               </li>
               <li>
-                <NavLink>DỊCH VỤ TIỆC</NavLink>
+                <Link>DỊCH VỤ TIỆC</Link>
               </li>
               <li>
-                <NavLink onClick={handleClick} to="/he-thong-nha-hang-kfc">
+                <Link onClick={handleClick} to="JS91-KFC_CLONE_PAGE/he-thong-nha-hang-kfc">
                   HỆ THỐNG NHÀ HÀNG
-                </NavLink>
+                </Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="header-right">
-          <NavLink to="/login">
+          <Link to="JS91-KFC_CLONE_PAGE/login">
             <PersonCircle className="header-right--icon" />
-          </NavLink>
-          <NavLink to="/cart">
+          </Link>
+          <Link to="JS91-KFC_CLONE_PAGE/cart">
             <CartFill onClick={handleClick} className="header-right--icon" />
             <span className="cart-icon-number">{cartLocalData.length}</span>
-          </NavLink>
+          </Link>
           <HamburgerMenu />
         </div>
       </div>

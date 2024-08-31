@@ -21,7 +21,7 @@ const ProductCard = ({ props, handleAddProductCart }) => {
   const navigative = useNavigate();
 
   const handleClick = () => {
-    navigative(`/order/${kind}/${id}`);
+    navigative(`/JS91-KFC_CLONE_PAGE/order/${kind}/${id}`);
     scroll.scrollToTop();
   };
 

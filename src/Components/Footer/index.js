@@ -10,10 +10,13 @@ const Footer = ({orderData}) => {
     scroll.scrollToTop();
   };
 
+  console.log(orderData);
+  
+
   const renderMenuList = orderData.map((category) => {
     return (
       <li key={category.id}>
-      <RouterNavLink onClick={handleClick} to={`${category.navigative}`}>{category.title}</RouterNavLink>
+      <Link onClick={handleClick} to={`/JS91-KFC_CLONE_PAGE/${category.navigative}`}>{category.title}</Link>
     </li>
     )
   })
@@ -32,13 +35,13 @@ const Footer = ({orderData}) => {
             <span>Về KFC</span>
             <ul>
               <li>
-                <RouterNavLink onClick={handleClick} to="/kfctabs/our-story">Câu Chuyện Của Chúng Tôi</RouterNavLink>
+                <Link onClick={handleClick} to="JS91-KFC_CLONE_PAGE/kfctabs/our-story">Câu Chuyện Của Chúng Tôi</Link>
               </li>
               <li>
-                <RouterNavLink onClick={handleClick} to="/kfctabs/our-history" >Lịch Sử KFC</RouterNavLink>
+                <Link onClick={handleClick} to="JS91-KFC_CLONE_PAGE/kfctabs/our-history" >Lịch Sử KFC</Link>
               </li>
               <li>
-                <RouterNavLink onClick={handleClick} to="/kfctabs/about-yummy" >Về Tập Đoàn Yummy!</RouterNavLink>
+                <Link onClick={handleClick} to="JS91-KFC_CLONE_PAGE/kfctabs/about-yummy" >Về Tập Đoàn Yummy!</Link>
               </li>
             </ul>
           </div>
@@ -46,13 +49,13 @@ const Footer = ({orderData}) => {
             <span>Liên Hệ KFC</span>
             <ul>
               <li>
-                <RouterNavLink >Theo Dõi Đơn Hàng</RouterNavLink>
+                <Link >Theo Dõi Đơn Hàng</Link>
               </li>
               <li>
-                <RouterNavLink to="/he-thong-nha-hang-kfc" onClick={handleClick} >Hệ Thống Nhà Hàng</RouterNavLink>
+                <Link to="JS91-KFC_CLONE_PAGE/he-thong-nha-hang-kfc" onClick={handleClick} >Hệ Thống Nhà Hàng</Link>
               </li>
               <li>
-                <RouterNavLink to="/contact-us" onClick={handleClick}>Liên Hệ KFC</RouterNavLink>
+                <Link to="JS91-KFC_CLONE_PAGE/contact-us" onClick={handleClick}>Liên Hệ KFC</Link>
               </li>
             </ul>
           </div>
@@ -60,13 +63,13 @@ const Footer = ({orderData}) => {
             <span>Chính Sách</span>
             <ul>
               <li>
-                <RouterNavLink onClick={handleClick} to="/privacy-policy" >Chính Sách Hoạt Động</RouterNavLink>
+                <Link onClick={handleClick} to="JS91-KFC_CLONE_PAGE/privacy-policy" >Chính Sách Hoạt Động</Link>
               </li>
               <li>
-                <RouterNavLink onClick={handleClick} to="/terms-condition" >Chính Sách Quy Định</RouterNavLink>
+                <Link onClick={handleClick} to="JS91-KFC_CLONE_PAGE/terms-condition" >Chính Sách Quy Định</Link>
               </li>
               <li>
-                <RouterNavLink onClick={handleClick} to="/infomation-policy" >Chính Sách Bảo Mật Thông Tin</RouterNavLink>
+                <Link onClick={handleClick} to="JS91-KFC_CLONE_PAGE/infomation-policy" >Chính Sách Bảo Mật Thông Tin</Link>
               </li>
             </ul>
           </div>

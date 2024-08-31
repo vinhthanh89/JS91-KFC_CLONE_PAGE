@@ -1,39 +1,150 @@
 import { useState } from "react";
-import {useNavigate} from 'react-router-dom'
+import { NavLink, useLocation } from "react-router-dom";
 
-import "./style.css";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
+import "./style.css";
 
 const MenuNavigation = () => {
-  const [value, setValue] = useState(0);
-  const navigate = useNavigate();
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
+  const location = useLocation();
+  
   return (
-    <Box sx={{ borderBottom: 1, borderColor: "lighgrey" }}>
+    <Box sx={{ borderBottom: 1, borderColor: "lightgrey" }}>
       <Tabs
         className="tabs"
-        value={value}
-        onChange={handleChange}
         variant="scrollable"
         scrollButtons="auto"
         textColor="black"
         indicatorColor="red"
         aria-label="scrollable auto tabs example"
       >
-        <Tab onClick={() => {navigate("/order/hot-deal")}} className="menu-tab" label="Ưu Đãi" />
-        <Tab onClick={() => {navigate("/order/new-product")}} className="menu-tab" label="Món Mới" />
-        <Tab onClick={() => {navigate("/order/combo-for-one")}} className="menu-tab" label="Combo 1 Người" />
-        <Tab onClick={() => {navigate("/order/combo-sharing")}} className="menu-tab" label="Combo Nhóm" />
-        <Tab onClick={() => {navigate("/order/fried-chicken")}} className="menu-tab" label="Gà Rán - Gà Quay" />
-        <Tab onClick={() => {navigate("/order/burger-rice-pasta")}} className="menu-tab" label="Burger - Cơm - Mì Ý" />
-        <Tab onClick={() => {navigate("/order/snack")}} className="menu-tab" label="Thức Ăn Nhẹ" />
-        <Tab onClick={() => {navigate("/order/dessert-drink")}} className="menu-tab" label="Thức Uống & Tráng Miệng" />
+        <Tab
+          className={`${
+            location.pathname === "/JS91-KFC_CLONE_PAGE/order/hot-deal"
+              ? "Mui-selected"
+              : ""
+          } menu-tab`}
+          label={
+            <NavLink
+              to="/JS91-KFC_CLONE_PAGE/order/hot-deal"
+              className="menu-label"
+              activeClassName="active"
+              exact
+            >
+              Ưu Đãi
+            </NavLink>
+          }
+        />
+        <Tab
+          className={`${
+            location.pathname === "/JS91-KFC_CLONE_PAGE/order/new-product"
+              ? "Mui-selected"
+              : ""
+          } menu-tab`}
+          label={
+            <NavLink
+              to="/JS91-KFC_CLONE_PAGE/order/new-product"
+              className="menu-label"
+              activeClassName="active"
+              exact
+            >
+              Món Mới
+            </NavLink>
+          }
+        />
+        <Tab
+          className={`${
+            location.pathname === "/JS91-KFC_CLONE_PAGE/order/combo-for-one"
+              ? "Mui-selected"
+              : ""
+          } menu-tab`}
+          label={
+            <NavLink
+              to="/JS91-KFC_CLONE_PAGE/order/combo-for-one"
+              className="menu-label"
+              activeClassName="active"
+              exact
+            >
+              Combo 1 người
+            </NavLink>
+          }
+        />
+        <Tab
+          className={`${
+            location.pathname === "/JS91-KFC_CLONE_PAGE/order/combo-sharing"
+              ? "Mui-selected"
+              : ""
+          } menu-tab`}
+          label={
+            <NavLink
+              to="/JS91-KFC_CLONE_PAGE/order/combo-sharing"
+              className="menu-label"
+            >
+              Combo Nhóm
+            </NavLink>
+          }
+        />
+        <Tab
+          className={`${
+            location.pathname === "/JS91-KFC_CLONE_PAGE/order/fried-chicken"
+              ? "Mui-selected"
+              : ""
+          } menu-tab`}
+          label={
+            <NavLink
+              to="/JS91-KFC_CLONE_PAGE/order/fried-chicken"
+              className="menu-label"
+            >
+              Gà Rán - Gà Quay
+            </NavLink>
+          }
+        />
+        <Tab
+          className={`${
+            location.pathname === "/JS91-KFC_CLONE_PAGE/order/burger-rice-pasta"
+              ? "Mui-selected"
+              : ""
+          } menu-tab`}
+          label={
+            <NavLink
+              to="/JS91-KFC_CLONE_PAGE/order/burger-rice-pasta"
+              className="menu-label"
+            >
+              Buger - Cơm - Mì Ý
+            </NavLink>
+          }
+        />
+        <Tab
+          className={`${
+            location.pathname === "/JS91-KFC_CLONE_PAGE/order/snack"
+              ? "Mui-selected"
+              : ""
+          } menu-tab`}
+          label={
+            <NavLink
+              to="/JS91-KFC_CLONE_PAGE/order/snack"
+              className="menu-label"
+            >
+              Thức Ăn Nhẹ
+            </NavLink>
+          }
+        />
+        <Tab
+          className={`${
+            location.pathname === "/JS91-KFC_CLONE_PAGE/order/dessert-drink"
+              ? "Mui-selected"
+              : ""
+          } menu-tab`}
+          label={
+            <NavLink
+              to="/JS91-KFC_CLONE_PAGE/order/dessert-drink"
+              className="menu-label"
+            >
+              Thức Uống & Tráng Miệng
+            </NavLink>
+          }
+        />
       </Tabs>
     </Box>
   );

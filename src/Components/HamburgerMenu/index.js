@@ -47,42 +47,42 @@ const HamburgerMenu = () => {
           <div className="burgerlist__title">Danh Mục Món Ăn</div>
           <ul>
             <li>
-              <NavLink onClick={handleClick} to="/order/hot-deal">
+              <NavLink onClick={handleClick} to="JS91-KFC_CLONE_PAGE/order/hot-deal">
                 Ưu Đãi &gt;
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={handleClick} to="/order/new-product">
+              <NavLink onClick={handleClick} to="JS91-KFC_CLONE_PAGE/order/new-product">
                 Món Mới &gt;
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={handleClick} to="/order/combo-for-one">
+              <NavLink onClick={handleClick} to="JS91-KFC_CLONE_PAGE/order/combo-for-one">
                 Combo 1 Người &gt;
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={handleClick} to="/order/combo-sharing">
+              <NavLink onClick={handleClick} to="JS91-KFC_CLONE_PAGE/order/combo-sharing">
                 Combo Nhóm &gt;
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={handleClick} to="/order/fried-chicken">
+              <NavLink onClick={handleClick} to="JS91-KFC_CLONE_PAGE/order/fried-chicken">
                 Gà Rán - Gà Quay &gt;
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={handleClick} to="/order/burger-rice-pasta">
+              <NavLink onClick={handleClick} to="JS91-KFC_CLONE_PAGE/order/burger-rice-pasta">
                 Burger - Cơm - Mì Ý &gt;
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={handleClick} to="/order/snack">
+              <NavLink onClick={handleClick} to="JS91-KFC_CLONE_PAGE/order/snack">
                 Thức Ăn Nhẹ &gt;
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={handleClick} to="/order/dessert-drink">
+              <NavLink onClick={handleClick} to="JS91-KFC_CLONE_PAGE/order/dessert-drink">
                 Thức Uống & Tráng Miệng &gt;
               </NavLink>
             </li>
@@ -94,17 +94,17 @@ const HamburgerMenu = () => {
           <div className="burgerlist__title">Về KFC</div>
           <ul>
             <li>
-              <NavLink onClick={handleClick} to="/kfctabs/our-story">
+              <NavLink onClick={handleClick} to="JS91-KFC_CLONE_PAGE/kfctabs/our-story">
                 Câu Chuyện Của Chúng Tôi &gt;
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={handleClick} to="/kfctabs/our-history">
+              <NavLink onClick={handleClick} to="JS91-KFC_CLONE_PAGE/kfctabs/our-history">
                 Lịch Sử KFC &gt;
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={handleClick} to="/kfctabs/about-yummy">
+              <NavLink onClick={handleClick} to="JS91-KFC_CLONE_PAGE/kfctabs/about-yummy">
                 Về Tập Đoàn YUM! &gt;
               </NavLink>
             </li>
@@ -119,7 +119,7 @@ const HamburgerMenu = () => {
               <NavLink>Theo Dõi Đơn Hàng &gt;</NavLink>
             </li>
             <li>
-              <NavLink onClick={handleClick} to="/contact-us">
+              <NavLink onClick={handleClick} to="JS91-KFC_CLONE_PAGE/contact-us">
                 Liên Hệ KFC &gt;
               </NavLink>
             </li>
@@ -131,17 +131,17 @@ const HamburgerMenu = () => {
           <div className="burgerlist__title">Chính Sách</div>
           <ul>
             <li>
-              <NavLink onClick={handleClick} to="/privacy-policy">
+              <NavLink onClick={handleClick} to="JS91-KFC_CLONE_PAGE/privacy-policy">
                 Chính Sách Hoạt Động &gt;
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={handleClick} to="/terms-condition">
+              <NavLink onClick={handleClick} to="JS91-KFC_CLONE_PAGE/terms-condition">
                 Chính Sách Và Quy Định &gt;
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={handleClick} to="/infomation-policy">
+              <NavLink onClick={handleClick} to="JS91-KFC_CLONE_PAGE/infomation-policy">
                 Chính Sách Bảo Mật Thông Tin &gt;
               </NavLink>
             </li>

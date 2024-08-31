@@ -6,6 +6,7 @@ import "./style.css";
 // import Notification from "../Notification/Notification";
 
 const ProductDetail = ({ data, handleAddProductCart }) => {
+ 
   const [productCounter, setProductCounter] = useState(1);
   const urlParam = useParams();
   const foundObject = data.find((item) => item.id === urlParam.productId) || [];

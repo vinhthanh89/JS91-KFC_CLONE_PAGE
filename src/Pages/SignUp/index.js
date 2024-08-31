@@ -34,6 +34,7 @@ const SignUp = () => {
   };
 
   const [form] = Form.useForm();
+
   return (
     <div className="signup-container">
       <h1>TẠO TÀI KHOẢN</h1>
@@ -45,21 +46,39 @@ const SignUp = () => {
           autoComplete="off"
         >
           <Form.Item
-            name="name"
-            label="Họ và Tên"
+            name="lastName"
+            label="Họ của bạn"
             rules={[
               {
                 required: true,
-                message: "Hãy nhập Họ và Tên",
+                message: "Hãy nhập Họ của bạn",
               },
             ]}
           >
             <Input
               //   onChange={handleChangeInput}
-              name="name"
-              placeholder="Họ và tên của bạn"
+              name="lastName"
+              placeholder="Hãy nhập Họ của bạn"
             />
           </Form.Item>
+
+          <Form.Item
+            name="firstName"
+            label="Tên của bạn"
+            rules={[
+              {
+                required: true,
+                message: "Hãy nhập Tên của bạn",
+              },
+            ]}
+          >
+            <Input
+              //   onChange={handleChangeInput}
+              name="firstName"
+              placeholder="Hãy nhập Tên của bạn"
+            />
+          </Form.Item>
+
           <Form.Item
             name="email"
             label="Email của bạn"

@@ -11,13 +11,13 @@ const AboutUs = () => {
       <div className="kfctabs__navigation">
         <ul>
           <li>
-            <NavLink to="/kfctabs/our-story">CÂU CHUYỆN CỦA CHÚNG TÔI</NavLink>
+            <NavLink to="/JS91-KFC_CLONE_PAGE/kfctabs/our-story">CÂU CHUYỆN CỦA CHÚNG TÔI</NavLink>
           </li>
           <li>
-            <NavLink to="/kfctabs/our-history">LỊCH SỬ KFC</NavLink>
+            <NavLink to="/JS91-KFC_CLONE_PAGE/kfctabs/our-history">LỊCH SỬ KFC</NavLink>
           </li>
           <li>
-            <NavLink to="/kfctabs/about-yummy">VỀ TẬP ĐOÀN YUM!</NavLink>
+            <NavLink to="/JS91-KFC_CLONE_PAGE/kfctabs/about-yummy">VỀ TẬP ĐOÀN YUM!</NavLink>
           </li>
         </ul>
       </div>

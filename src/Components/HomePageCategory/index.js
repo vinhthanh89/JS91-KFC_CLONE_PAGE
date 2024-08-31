@@ -13,6 +13,8 @@ const HomePageCategory = ({orderData}) => {
     navigative(param);
     scroll.scrollToTop();
   };
+  console.log(orderData);
+  
 
   const renderCategoryCard = orderData.map((category) => {
     return (

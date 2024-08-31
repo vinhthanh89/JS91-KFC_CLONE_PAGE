@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 import "./App.css";
 import AboutYummy from "./Components/AboutYummy";
@@ -105,10 +106,11 @@ function App() {
 
   return (
     <div className="App">
+      <Toaster />
       <Header cartLocalData={cartLocalData} />
       <Routes>
         <Route
-          path="/cart"
+          path="JS91-KFC_CLONE_PAGE/cart"
           element={
             <TestCart
               cartLocalData={cartLocalData}
@@ -121,7 +123,7 @@ function App() {
       </Routes>
       <Routes>
         <Route
-          path="/"
+          path="/JS91-KFC_CLONE_PAGE"
           element={
             <HomePage
               handleAddProductCart={handleAddProductCart}
@@ -130,7 +132,7 @@ function App() {
             />
           }
         />
-        <Route path="/order" element={<Order />}>
+        <Route path="JS91-KFC_CLONE_PAGE/order" element={<Order />}>
           <Route
             path="hot-deal"
             element={
@@ -273,19 +275,19 @@ function App() {
             }
           />
         </Route>
-        <Route path="/he-thong-nha-hang-kfc" element={<Restaurants />} />
-        <Route path="/infomation-policy" element={<InfomationPolicy />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/terms-condition" element={<TermsCondition />} />
-        <Route path="/kfctabs" element={<AboutUs />}>
+        <Route path="JS91-KFC_CLONE_PAGE/he-thong-nha-hang-kfc" element={<Restaurants />} />
+        <Route path="JS91-KFC_CLONE_PAGE/infomation-policy" element={<InfomationPolicy />} />
+        <Route path="JS91-KFC_CLONE_PAGE/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="JS91-KFC_CLONE_PAGE/terms-condition" element={<TermsCondition />} />
+        <Route path="JS91-KFC_CLONE_PAGE/kfctabs" element={<AboutUs />}>
           <Route path="about-yummy" element={<AboutYummy />} />
           <Route path="our-history" element={<OurHistory />} />
           <Route path="our-story" element={<OurStory />} />
         </Route>
         <Route />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="JS91-KFC_CLONE_PAGE/login" element={<LoginPage />} />
+        <Route path="JS91-KFC_CLONE_PAGE/sign-up" element={<SignUp />} />
+        <Route path="JS91-KFC_CLONE_PAGE/contact-us" element={<ContactUs />} />
       </Routes>
       <Footer orderData={orderData} />
     </div>

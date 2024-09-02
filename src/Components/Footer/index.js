@@ -4,18 +4,23 @@ import { Facebook, Instagram, Twitter, Youtube } from "react-bootstrap-icons";
 import { animateScroll as scroll } from "react-scroll";
 
 import "./style.css";
+// import useSelection from "antd/es/table/hooks/useSelection";
+import { useSelector } from "react-redux";
 
-const Footer = ({ orderData }) => {
+const Footer = () => {
+  const reduxOrder = useSelector((state) => state.orderData.value)
+  console.log(reduxOrder);
+  
   const handleClick = () => {
     scroll.scrollToTop();
   };
 
-  const renderMenuList = orderData.map((category) => {
+  const renderMenuList = reduxOrder.map((category) => {
     return (
       <li key={category.id}>
         <Link
           onClick={handleClick}
-          to={`/JS91-KFC_CLONE_PAGE/${category.navigative}`}
+          to={`/JS91-KFC_CLONE_PAGE/order/${category.navigative}`}
         >
           {category.title}
         </Link>

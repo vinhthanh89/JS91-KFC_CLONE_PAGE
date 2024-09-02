@@ -3,13 +3,16 @@ import { Button } from "antd";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import "./style.css";
+import { useSelector } from "react-redux";
 // import Notification from "../Notification/Notification";
 
-const ProductDetail = ({ data, handleAddProductCart }) => {
- 
+const ProductDetail = ({ handleAddProductCart }) => {
+  const foodData = useSelector(state => state.foodData.value)
+
   const [productCounter, setProductCounter] = useState(1);
+  
   const urlParam = useParams();
-  const foundObject = data.find((item) => item.id === urlParam.productId) || [];
+  const foundObject = foodData.find((item) => item.id === urlParam.productId) || [];
   const { id, image, title, description, price } = foundObject;
   const productLocal = {
     image: image,

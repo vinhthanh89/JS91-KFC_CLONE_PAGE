@@ -1,9 +1,11 @@
 import Slider from "react-slick";
 
-import "./style.css";
+import { useSelector } from "react-redux";
 import ProductCard from "../ProductCard";
+import "./style.css";
 
-const HomePageSuggestion = ({ data ,handleAddProductCart }) => {
+const HomePageSuggestion = ({handleAddProductCart }) => {
+  const foodData = useSelector(state => state.foodData.value)
   const settings = {
     dots: false,
     infinite: true,
@@ -12,7 +14,7 @@ const HomePageSuggestion = ({ data ,handleAddProductCart }) => {
     slidesToScroll: 1,
   };
 
-  const dataFilter = data.filter((item) => item.kind === "combo-for-one");
+  const dataFilter = foodData.filter((item) => item.kind === "combo-for-one");
   const renderData = dataFilter.map((item) => {
     return (
       <div className="productcard--item" key={item.id}>

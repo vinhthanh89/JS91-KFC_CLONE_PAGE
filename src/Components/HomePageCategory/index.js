@@ -4,8 +4,10 @@ import { animateScroll as scroll } from "react-scroll";
 import { Card } from "antd";
 
 import "./style.css";
+import { useSelector } from "react-redux";
 
-const HomePageCategory = ({orderData}) => {
+const HomePageCategory = () => {
+  const reduxOrderData = useSelector(state => state.orderData.value)
   const { Meta } = Card;
   const navigative = useNavigate();
 
@@ -13,13 +15,11 @@ const HomePageCategory = ({orderData}) => {
     navigative(param);
     scroll.scrollToTop();
   };
-  console.log(orderData);
   
-
-  const renderCategoryCard = orderData.map((category) => {
+  const renderCategoryCard = reduxOrderData.map((category) => {
     return (
       <div
-        onClick={() => handleClick(category.navigative)}
+        onClick={() => handleClick(`order/${category.navigative}`)}
         className="category item"
         key={category.id}
       >

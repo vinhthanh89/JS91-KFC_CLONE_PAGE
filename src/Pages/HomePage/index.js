@@ -1,14 +1,16 @@
-import "./style.css";
 import HomePageCategory from "../../Components/HomePageCategory";
 import HomePageSuggestion from "../../Components/HomePageSuggestion";
 import SlickSlider from "../../Components/SlickSlider";
+import "./style.css";
 
-const HomePage = ({data , orderData ,handleAddProductCart}) => {
+const HomePage = ({handleAddProductCart }) => {
   return (
     <main>
       <SlickSlider />
-      <HomePageCategory orderData={orderData} />
-      <HomePageSuggestion handleAddProductCart={handleAddProductCart} data={data} />
+      <HomePageCategory />
+      <HomePageSuggestion
+        handleAddProductCart={handleAddProductCart}
+      />
     </main>
   );
 };

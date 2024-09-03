@@ -8,9 +8,7 @@ export const orderDataSlice = createSlice({
     name : 'orderData',
     initialState,
     reducers : {
-        setOrderDataSlice : (state , action) => {
-            console.log(action);
-            
+        setOrderDataSlice : (state , action) => {         
             state.value = action.payload
         }
     }

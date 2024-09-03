@@ -4,8 +4,16 @@ import { animateScroll as scroll } from "react-scroll";
 
 import HamburgerMenu from "../HamburgerMenu";
 import "./style.css";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
-const Header = ({ cartLocalData }) => {
+const Header = () => {
+  const cartData = useSelector(state => state.cartData.value)
+
+  useEffect(() => {
+    localStorage.setItem("cartRedux", JSON.stringify(cartData));
+  }, [cartData]);
+
   const handleClick = () => {
     scroll.scrollToTop();
   };
@@ -46,7 +54,7 @@ const Header = ({ cartLocalData }) => {
           </Link>
           <Link to="JS91-KFC_CLONE_PAGE/cart">
             <CartFill onClick={handleClick} className="header-right--icon" />
-            <span className="cart-icon-number">{cartLocalData.length}</span>
+            <span className="cart-icon-number">{cartData.length}</span>
           </Link>
           <HamburgerMenu />
         </div>

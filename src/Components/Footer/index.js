@@ -9,7 +9,6 @@ import { useSelector } from "react-redux";
 
 const Footer = () => {
   const reduxOrder = useSelector((state) => state.orderData.value)
-  console.log(reduxOrder);
   
   const handleClick = () => {
     scroll.scrollToTop();

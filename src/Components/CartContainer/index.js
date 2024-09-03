@@ -2,15 +2,12 @@ import "./style.css";
 import ProductCartItem from "../ProductCartItem";
 import couponData from "../../Data/couponData";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
-const CartContainer = ({
-  cartLocalData,
-  handleDeleteProductCart,
-  handleIncreProductQuantity,
-  handleDecreProductQuantity,
-}) => {
+const CartContainer = () => {
   const [couponInput, setCouponInput] = useState("");
   const [coupon, setCoupon] = useState(0 / 10);
+  const cartData = useSelector((state) => state.cartData.value);
 
   const handleChangeCouponInput = (event) => {
     setCouponInput(event.target.value);
@@ -23,23 +20,18 @@ const CartContainer = ({
     } else {
       window.alert("mã giảm giá của bạn không tồn tại");
     }
-    setCouponInput('');
+    setCouponInput("");
   };
 
-  const renderCartLocalData = cartLocalData.map((item) => {
+  const renderCartLocalData = cartData.map((item) => {
     return (
       <div className="productcart-item" key={item.id}>
-        <ProductCartItem
-          handleIncreProductQuantity={handleIncreProductQuantity}
-          handleDecreProductQuantity={handleDecreProductQuantity}
-          handleDeleteProductCart={handleDeleteProductCart}
-          item={item}
-        />
+        <ProductCartItem item={item} />
       </div>
     );
   });
 
-  const billTotal = cartLocalData.reduce((sum, item) => {
+  const billTotal = cartData.reduce((sum, item) => {
     return sum + item.price * item.quantity;
   }, 0);
 
@@ -50,13 +42,13 @@ const CartContainer = ({
       <div className="productcart-container">{renderCartLocalData}</div>
       <div className="paycart-container">
         <div className="paycart__title border-bottom">
-          <p>{cartLocalData.length} MÓN</p>
+          <p>{cartData.length} MÓN</p>
         </div>
         <div className="paycart__coupon border-bottom">
           <p>Bạn có mã giảm giá ?</p>
           <div className="paycart__coupon--input">
             <input
-            value={couponInput}
+              value={couponInput}
               onChange={handleChangeCouponInput}
               placeholder="Mã giảm giá"
               type="text"

@@ -13,6 +13,7 @@ import OrderOutlet from "./Components/OrderOutlet";
 import OurHistory from "./Components/OurHistory";
 import OurStory from "./Components/OurStory";
 import ProductDetail from "./Components/ProductDetail";
+import { setFoodDataSlice } from "./features/foodData/foodDataSlice";
 import { setOrderDataSlice } from "./features/orderData/orderDataSlice";
 import AboutUs from "./Pages/AboutUs";
 import ContactUs from "./Pages/ContactUs";
@@ -25,14 +26,10 @@ import Restaurants from "./Pages/Restaurants";
 import SignUp from "./Pages/SignUp";
 import TermsCondition from "./Pages/TermsCondition";
 import TestCart from "./Pages/TestCart";
-import { setFoodDataSlice } from "./features/foodData/foodDataSlice";
 
 function App() {
   const dispatch = useDispatch();
   const [orderData, setOrderData] = useState([]);
-  const [cartLocalData, setCartLocalData] = useState(
-    JSON.parse(localStorage.getItem("dataCart")) || []
-  );
 
   useEffect(() => {
     const fetchOrderData = async () => {
@@ -55,7 +52,7 @@ function App() {
         const response = await axios.get(
           "https://65b5f10fda3a3c16ab000d0d.mockapi.io/combocaterogy"
         );
-        dispatch(setFoodDataSlice(response.data))
+        dispatch(setFoodDataSlice(response.data));
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -63,64 +60,16 @@ function App() {
     fetchFoodData();
   }, [dispatch]);
 
-  useEffect(() => {
-    localStorage.setItem("dataCart", JSON.stringify(cartLocalData));
-  }, [cartLocalData]);
-
-  const handleAddProductCart = (productCart) => {
-    const item = cartLocalData.find((item) => item.id === productCart.id);
-    if (!item) {
-      setCartLocalData([...cartLocalData, productCart]);
-    } else {
-      item.quantity += productCart.quantity;
-    }
-  };
-
-  const handleDeleteProductCart = (productId) => {
-    setCartLocalData((prev) =>
-      prev.filter((productItem) => productItem.id !== productId)
-    );
-  };
-
-  const handleIncreProductQuantity = (productId) => {
-    setCartLocalData((prev) =>
-      prev.map((productItem) =>
-        productItem.id === productId
-          ? { ...productItem, quantity: productItem.quantity + 1 }
-          : productItem
-      )
-    );
-  };
-
-  const handleDecreProductQuantity = (productId) => {
-    setCartLocalData((prev) =>
-      prev.map((productItem) =>
-        productItem.id === productId
-          ? { ...productItem, quantity: productItem.quantity - 1 }
-          : productItem
-      )
-    );
-  };
-
   const orderRoutes = orderData.map((category) => {
     return (
       <React.Fragment key={category.id}>
         <Route
           path={category.navigative}
-          element={
-            <OrderOutlet
-              handleAddProductCart={handleAddProductCart}
-              category={category}
-            />
-          }
+          element={<OrderOutlet category={category} />}
         />
         <Route
           path={`${category.navigative}/:productId`}
-          element={
-            <ProductDetail
-              handleAddProductCart={handleAddProductCart}
-            />
-          }
+          element={<ProductDetail />}
         />
       </React.Fragment>
     );
@@ -129,14 +78,9 @@ function App() {
   return (
     <div className="App">
       <Toaster />
-      <Header cartLocalData={cartLocalData} />
+      <Header />
       <Routes>
-        <Route
-          path="/JS91-KFC_CLONE_PAGE"
-          element={
-            <HomePage handleAddProductCart={handleAddProductCart} />
-          }
-        />
+        <Route path="/JS91-KFC_CLONE_PAGE" element={<HomePage />} />
         <Route path="JS91-KFC_CLONE_PAGE/order" element={<Order />}>
           {orderRoutes}
         </Route>
@@ -165,17 +109,7 @@ function App() {
         <Route path="JS91-KFC_CLONE_PAGE/login" element={<LoginPage />} />
         <Route path="JS91-KFC_CLONE_PAGE/sign-up" element={<SignUp />} />
         <Route path="JS91-KFC_CLONE_PAGE/contact-us" element={<ContactUs />} />
-        <Route
-          path="JS91-KFC_CLONE_PAGE/cart"
-          element={
-            <TestCart
-              cartLocalData={cartLocalData}
-              handleDeleteProductCart={handleDeleteProductCart}
-              handleIncreProductQuantity={handleIncreProductQuantity}
-              handleDecreProductQuantity={handleDecreProductQuantity}
-            />
-          }
-        />
+        <Route path="JS91-KFC_CLONE_PAGE/cart" element={<TestCart />} />
       </Routes>
       <Footer />
     </div>

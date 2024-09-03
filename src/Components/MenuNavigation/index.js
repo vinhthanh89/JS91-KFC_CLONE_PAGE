@@ -23,8 +23,6 @@ const MenuNavigation = () => {
           <NavLink
             to={`/JS91-KFC_CLONE_PAGE/order/${category.navigative}`}
             className="menu-label"
-            activeClassName="active"
-            exact
           >
             {category.title}
           </NavLink>

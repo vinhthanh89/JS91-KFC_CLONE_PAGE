@@ -3,16 +3,19 @@ import { Button } from "antd";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import "./style.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addProduct } from "../../features/cartData/cartDataSlice";
 // import Notification from "../Notification/Notification";
 
-const ProductDetail = ({ handleAddProductCart }) => {
-  const foodData = useSelector(state => state.foodData.value)
+const ProductDetail = () => {
+  const foodData = useSelector((state) => state.foodData.value);
+  const dispatch = useDispatch();
 
   const [productCounter, setProductCounter] = useState(1);
-  
+
   const urlParam = useParams();
-  const foundObject = foodData.find((item) => item.id === urlParam.productId) || [];
+  const foundObject =
+    foodData.find((item) => item.id === urlParam.productId) || [];
   const { id, image, title, description, price } = foundObject;
   const productLocal = {
     image: image,
@@ -21,10 +24,6 @@ const ProductDetail = ({ handleAddProductCart }) => {
     price: price,
     quantity: productCounter,
     id: id,
-  };
-
-  const handleAddProduct = () => {
-    handleAddProductCart(productLocal);
   };
 
   return (
@@ -64,9 +63,11 @@ const ProductDetail = ({ handleAddProductCart }) => {
               />
             </div>
             <div className="addcart--button">
-              <button onClick={handleAddProduct}>{`Thêm vào giỏ ( ${(
-                productCounter * price
-              ).toLocaleString()}đ )`}</button>
+              <button onClick={() => dispatch(addProduct(productLocal))}>
+                {`Thêm vào giỏ ( ${(
+                  productCounter * price
+                ).toLocaleString()}đ )`}
+              </button>
             </div>
           </div>
         </div>

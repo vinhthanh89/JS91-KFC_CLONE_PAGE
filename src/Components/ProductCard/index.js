@@ -2,8 +2,11 @@ import { Link, useNavigate } from "react-router-dom";
 // import { useState, useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
 import "./style.css";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../features/cartData/cartDataSlice";
 
-const ProductCard = ({ props, handleAddProductCart }) => {
+const ProductCard = ({ props}) => {
+  const dispatch = useDispatch();
   const { image, title, description, price, kind, id } = props;
   const productLocal = {
     image: image,
@@ -12,10 +15,6 @@ const ProductCard = ({ props, handleAddProductCart }) => {
     price: price,
     quantity: 1,
     id: id,
-  };
-
-  const handleAddProduct = () => {
-    handleAddProductCart(productLocal);
   };
 
   const navigative = useNavigate();
@@ -55,7 +54,10 @@ const ProductCard = ({ props, handleAddProductCart }) => {
             Tùy Chỉnh
           </button>
 
-          <button onClick={handleAddProduct} className="button add-button">
+          <button
+            onClick={() => dispatch(addProduct(productLocal))}
+            className="button add-button"
+          >
             Thêm
           </button>
         </div>

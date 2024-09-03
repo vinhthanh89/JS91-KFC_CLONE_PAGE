@@ -2,14 +2,16 @@ import { MinusCircleOutlined, PlusCircleOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 
 import "./style.css";
+import { useDispatch } from "react-redux";
+import {
+  decreaseProductQuantity,
+  deleteProduct,
+  increaseProductQuantity,
+} from "../../features/cartData/cartDataSlice";
 
-const ProductCartItem = ({
-  item,
-  handleDeleteProductCart,
-  handleIncreProductQuantity,
-  handleDecreProductQuantity,
-}) => {
+const ProductCartItem = ({ item }) => {
   const { id, image, title, description, price, quantity } = item;
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -19,7 +21,7 @@ const ProductCartItem = ({
           <p className="productcart-item--info-title">{title}</p>
           <p className="productcart-item--info-des">{description}</p>
           <button
-            onClick={() => handleDeleteProductCart(id)}
+            onClick={() => dispatch(deleteProduct(id))}
             className="delete-button"
           >
             Xóa
@@ -29,13 +31,13 @@ const ProductCartItem = ({
       <div className="productcart-item__right">
         <div className="incrementer--button">
           <Button
-            onClick={() => handleDecreProductQuantity(id)}
+            onClick={() => dispatch(decreaseProductQuantity(id))}
             disabled={quantity <= 1 ? "disabled" : ""}
             icon={<MinusCircleOutlined className="incrementer--decrease" />}
           />
           <span>{quantity}</span>
           <Button
-            onClick={() => handleIncreProductQuantity(id)}
+            onClick={() => dispatch(increaseProductQuantity(id))}
             icon={<PlusCircleOutlined className="incrementer--increase" />}
           />
         </div>

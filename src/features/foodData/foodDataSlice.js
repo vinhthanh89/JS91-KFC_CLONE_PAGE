@@ -8,9 +8,7 @@ export const foodDataSlice = createSlice({
     name : 'foodData',
     initialState,
     reducers : {
-        setFoodDataSlice : (state , action) => {
-            console.log(action);
-            
+        setFoodDataSlice : (state , action) => {        
             state.value = action.payload
         }
     }
